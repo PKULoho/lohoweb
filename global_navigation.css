@@ -53,3 +53,8 @@ body {
 .global-nav .nav-item.right-nav-item:nth-of-type(3) {
     margin-right: 80px;
 }
+
+.fix {
+    height: 80px;
+    width: 100%;
+}
