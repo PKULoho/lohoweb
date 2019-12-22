@@ -46,6 +46,11 @@ body {
     margin-right: 20px;
 }
 
+.global-nav .nav-item.right-nav-item.active a {
+    color: #ffffff;
+    text-decoration-line: underline;
+}
+
 .global-nav .nav-item.right-nav-item .logout-button {
     font-size: 15px;
 }
