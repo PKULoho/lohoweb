@@ -19,8 +19,8 @@ body {
     position: absolute;
     width: 485px;
     height: 522px;
-    left: 888px;
     top: 122px;
+    right: 80px;
     display: flex;
 }
 
@@ -110,8 +110,8 @@ body {
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-    top: 530px;
-    left: 1180px;
+    top: 410px;
+    left: 270px;
 }
 
 .login-link a{
