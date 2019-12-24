@@ -1,0 +1,43 @@
+.side-nav {
+    width: 159px;
+    display: inline-block;
+}
+
+.side-nav .side-nav-header {
+    line-height: 35px;
+    font-size: 17px;
+    color: #FFFFFF;
+    background-color: #ec808d;
+    text-align: center;
+}
+
+.side-nav .side-nav-modules {
+    line-height: 35px;
+    font-size: 16px;
+}
+
+.side-nav .side-nav-modules .module-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.side-nav .side-nav-modules .module-list a {
+    color: #333333;
+    text-decoration-line: none;
+}
+
+.side-nav .side-nav-modules .module-list .module-item {
+    text-align: center;
+    background-color: #F2F2F2;
+}
+
+.side-nav .side-nav-modules .module-list .module-item.active {
+    background-color: #FFDBC5;
+    color: #6C5B7B;
+}
+
+.side-nav .side-nav-modules .module-list .module-item:hover {
+    background-color: #FFDBC5;
+    color: #8D4F5E;
+}

@@ -1,0 +1,77 @@
+.main-container {
+    width: 1000px;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.right-area {
+    display: inline-block;
+    width: 800px;
+    vertical-align: top;
+    margin-left: 30px;
+}
+
+.right-area h1 {
+    color: #C7737D;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    font-weight: 500;
+    /*regular*/
+}
+
+.right-section {
+    margin-bottom: 40px;
+}
+
+.collection-items .collection-item {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #999999;
+}
+
+.collection-items .collection-item img {
+    width: 90px;
+    height: 87px;
+    margin: 10px 10px 10px 10px;
+    display: inline-block;
+}
+
+.collection-items .collection-item .activity-info {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #333333;
+}
+
+.collection-items .collection-item .activity-info a {
+    color: #333333;
+    text-decoration-line: none;
+}
+
+.collection-items .collection-item .activity-options {
+    margin-top: 10px;
+    margin-right: 20px;
+    float: right;
+    font-size: 15px;
+}
+
+.collection-items .collection-item .activity-options div {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.collection-items .collection-item .activity-options a {
+    color: #94565D;
+}
+
+.collection-items .collection-item .activity-options div:hover {
+    background-color: #EC808D;
+}
+
+.collection-items .collection-item .activity-options div:hover a {
+    color: #FFFFFF;
+}
