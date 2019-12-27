@@ -109,12 +109,16 @@
     box-shadow: none;
 
 }
-.login-btn a{
+.login-btn{
     text-decoration:none;
     font-weight: 500;
     font-style: normal;
     font-size: 22px;
     color: #F2F2F2;
+}
+
+.login-btn:hover{
+    cursor: pointer;
 }
 
 .register-link {

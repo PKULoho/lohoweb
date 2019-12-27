@@ -1,23 +1,26 @@
 #main {
-	display: block;
-	margin-bottom: 10px;
-	width: auto;
-	height: 1000px;
+    display: block;
+    margin-bottom: 10px;
+    width: auto;
+    height: 1000px;
 }
-li{
-	font-family: 'PingFangSC-Regular', 'PingFang SC';
+
+li {
+    font-family: 'PingFangSC-Regular', 'PingFang SC';
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
     color: #C06C84;
-    float:left; 
+    float: left;
     margin-right: 20px;
-    text-decoration:none;
-    list-style:none; /* 去掉默认的列表符号 */
+    text-decoration: none;
+    list-style: none;
+    /* 去掉默认的列表符号 */
 }
+
 .list {
     border-width: 0px;
-    margin:20px 120px 20px;
+    margin: 20px 120px 20px;
     padding: 0px 0px 30px 0px;
     border-width: 3px;
     border-style: solid;
@@ -25,15 +28,16 @@ li{
     border-radius: 0px;
 }
 
-div.a :hover, .active{
-	background: #f76968;
-	color:#fff;
-	text-decoration:none;
-	cursor: pointer; 
+.list.a li:hover, li.active {
+    background: #f76968;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
 }
-#ddd li:hover{
-	border-width: 0px;
-    margin:20px 120px 20px;
+
+#ddd li:hover {
+    border-width: 0px;
+    margin: 20px 120px 20px;
     padding: 0px 0px 30px 0px;
     border-width: 3px;
     border-style: solid;
@@ -42,62 +46,110 @@ div.a :hover, .active{
 }
 
 .each_list {
-	display: block;
-	margin-left: 20px;
-	margin-bottom: 20px
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 20px
 }
+
+.each_list:nth-child(1) li {
+    margin-top: 10px;
+}
+
+.each_list:nth-child(1) li:last-of-type {
+    width: 300px;
+    margin-top: 5px;
+}
+
+.each_list:nth-child(1) li:last-of-type:hover {
+    background-color: #fff;
+}
+
+.each_list li label {
+    float: left;
+    font-weight: normal;
+    vertical-align: middle;
+    line-height: 34px;
+    color: #C06C84;
+}
+
+.each_list li label.active {
+    color: #fff;
+    background-color: #f76968;
+}
+
+.each_list .form-control {
+    margin-left: 10px;
+    float: left;
+    width: 200px;
+    vertical-align: middle;
+}
+
 .theme {
-	width: 80px;
+    width: 80px;
 }
+
 hr {
-	height:0px; 
-	border-top:1px solid #C06C84;
-	border-right:0px; 
-	border-bottom:0px; 
-	border-left:0px; 
-	width:90%;
+    height: 0px;
+    border-top: 1px solid #C06C84;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-left: 0px;
+    width: 90%;
+    margin-top: 6px;
+    margin-bottom: 10px;
 }
+
 .list_left {
-	width: 700px;
-	margin: 0px 20px 0px 80px;
-	float: left;
+    width: 700px;
+    margin: 0px 20px 0px 80px;
+    float: left;
 }
+
 .list_title {
     color: #EC808D;
     font-size: 23px;
     line-height: 80px;
     text-decoration-line: none;
-    font-weight:bold;
+    font-weight: bold;
 }
+
 .activity_left {
-	margin: 10px 5px 0px 30px;
+    margin: 10px 5px 0px 30px;
 }
+
 .activity_item {
-	border-color: #ADADAD;
-	border-width: 1px;
+    border-color: #ADADAD;
+    border-width: 1px;
     border-style: solid;
     border-radius: 0px;
-    
 }
-.activity_img {
-	width: 100px;
-	height: 100px;
 
+.activity_img {
+    width: 100px;
+    height: 100px;
 }
+
 .activity_item_left {
-	float:left; width:120px; height:100px;
-	margin: 15px 0px 15px 15px
+    float: left;
+    width: 120px;
+    height: 100px;
+    margin: 15px 0px 15px 15px
 }
+
 .activity_item_right {
- width:580px; height:100px;
-color: black;
+    width: 580px;
+    height: 100px;
+    color: black;
 }
+
 .operation {
-	float: right;
+    float: right;
 }
+
 .operation_item {
-	margin-right: 10px
+    margin-right: 10px
 }
+
 .collection-items .collection-item {
     border-style: solid;
     border-width: 1px;
@@ -117,7 +169,14 @@ color: black;
     margin-top: 10px;
     font-size: 15px;
     color: #333333;
-    
+    width: 540px;
+}
+
+.activity_left .collection-items .collection-item .activity-info .info-item {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 540px;
 }
 
 .collection-items .collection-item .activity-info a {
@@ -148,17 +207,32 @@ color: black;
 .collection-items .collection-item .activity-options div:hover a {
     color: #FFFFFF;
 }
+
 .list_right {
-	width: 340px;
-	margin: 0px 20px 0px 20px;
-	float: left;
+    width: 340px;
+    margin: 0px 20px 0px 20px;
+    float: left;
 }
+
 .info_item_left {
-	width: 250px;float: left;
+    width: 250px;
+    float: left;
 }
+
 .info_item_right {
-	width: 250px;float: left;margin-bottom: 10px;
+    /*width: 250px;*/
+    float: left;
+    margin-bottom: 10px;
 }
+
 .activity_right {
-	margin: 10px 5px 0px 0px;
+    margin: 10px 5px 0px 0px;
+}
+
+.global-nav .search-bar input {
+    height: 36px;
+}
+
+.global-nav .search-bar button {
+    line-height: 36px;
 }

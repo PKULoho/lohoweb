@@ -71,6 +71,49 @@ body {
     margin-right: 80px;
 }
 
+.global-nav .search-bar{
+    font-size: 0;
+    line-height: 80px;
+    float: left;
+    margin-left: 40px;
+}
+
+.global-nav .search-bar input{
+    height: 30px;
+    vertical-align: middle;
+    width: 300px;
+    border-color: #ffffff;
+    border-width: 2px;
+    border-style: solid;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.global-nav .search-bar input:focus{
+    outline: none;
+}
+
+.global-nav .search-bar button{
+    height: 36px;
+    vertical-align: middle;
+    width: 80px;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #ec808d;
+    border-color: #ffffff;
+    border-width: 0.5px;
+    border-style: solid;
+}
+
+.global-nav .search-bar button:hover{
+    cursor: pointer;
+    background-color: #c76a75;
+}
+
+.global-nav .search-bar button:focus{
+    outline: none;
+}
+
 .fix {
     height: 80px;
     width: 100%;
