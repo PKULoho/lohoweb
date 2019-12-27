@@ -3,6 +3,7 @@
     margin: auto;
     padding-top: 50px;
     padding-bottom: 50px;
+    margin-bottom: 280px
 }
 .u-c-label{
     border-width: 0px;
@@ -25,7 +26,7 @@
     left: 517px;
     top: 160px;
     width: 475px;
-    height: 395px;
+    height: 486px;
     background: inherit;
     background-color: rgba(255, 219, 197, 0);
     box-sizing: border-box;
@@ -43,6 +44,14 @@
     width: 118px;
     height: 53px;
     display: flex;
+}
+.u-i-item img{
+    width: 100px;
+    height: 100px;
+    padding: auto;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 .u-i-item span{
     font-weight: 500;
@@ -68,57 +77,63 @@
 }
 
 .item01-label{
-    left: 80px;
-    top: 40px;
+    left: 0px;
+    top: 15px;
+    width: 475px;
 }
-.item01-input{
-    left: 200px;
-    top: 40px;
-}
+
 .item02-label{
     left: 80px;
-    top: 85px;
+    top: 130px;
 }
 .item02-input{
     left: 200px;
-    top: 85px;
+    top: 130px;
 }
 .item03-label{
     left: 80px;
-    top: 130px;
+    top: 175px;
 }
 .item03-input{
     left: 200px;
-    top: 130px;
+    top: 175px;
 }
 .item04-label{
     left: 80px;
-    top: 175px;
+    top: 220px;
 }
 .item04-input{
     left: 200px;
-    top: 175px;
+    top: 220px;
 }
 .item05-label{
     left: 80px;
-    top: 220px;
+    top: 265px;
 }
 .item05-input{
     left: 200px;
-    top: 220px;
+    top: 265px;
 }
 .item06-label{
     left: 80px;
-    top: 265px;
+    top: 310px;
 }
 .item06-input{
     left: 200px;
-    top: 265px;
+    top: 310px;
+}
+.item07-label{
+    left: 80px;
+    top: 355px;
+}
+.item07-input{
+    left: 200px;
+    top: 355px;
 }
 .update-btn{
     position: absolute;
     left: 315px;
-    top: 330px;
+    top: 420px;
     width: 80px;
     height: 33px;
     background-color: rgba(93, 117, 153, 1);
@@ -141,7 +156,7 @@
     border-width: 0px;
     position: absolute;
     left: 240px;
-    top: 340px;
+    top: 430px;
     width: 61px;
     height: 24px;
     display: flex;
