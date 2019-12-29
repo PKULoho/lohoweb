@@ -75,9 +75,9 @@
 <?php
 
 //从cookie获取用户最初在登陆界面输入的信息
-$username = ‘root';
+$username = 'root';
 $password = 'abcd';
-$sqlname = 'loho'';
+$sqlname = 'loho';
 
 
 //连接数据库
@@ -100,8 +100,8 @@ for($x=0;$x<$arrlength;$x++)
     $itemlist = $mysqli->query($sql_query, MYSQLI_STORE_RESULT);
 
     //计数，每类显示六个活动
-    $itemcount=0
-    while (list($id,$name,$first,$place) = $itemlist->fetch_row() and $itemcount<6) {
+    $itemcount=0;
+    while ((list($id,$name,$first,$place) = $itemlist->fetch_row()) && $itemcount<6) {
         echo '<a href="'.$id.'.html">
         <div class="item">
             <div class="item-pic"><img src="pic/'.$id.'.png"></div>
@@ -120,7 +120,7 @@ for($x=0;$x<$arrlength;$x++)
     //下面是因为咱们数据库里有的不足6个活动，于是用其他活动补齐6个
     $sql_query = "SELECT act_id,act_name,act_first_day,act_place FROM act_info WHERE act_first_day > '2020-01-03'";
     $itemlist = $mysqli->query($sql_query, MYSQLI_STORE_RESULT);
-    while (list($id,$name,$first,$place) = $itemlist->fetch_row() and $itemcount<6) {
+    while ((list($id,$name,$first,$place) = $itemlist->fetch_row()) && $itemcount<6) {
         echo '<a href="'.$id.'.html">
         <div class="item">
             <div class="item-pic"><img src="pic/'.$id.'.png"></div>
@@ -137,7 +137,7 @@ for($x=0;$x<$arrlength;$x++)
     }
 
     
-    echo '</div>'
+    echo '</div>';
 
 }
 
