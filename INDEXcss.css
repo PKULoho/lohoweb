@@ -1,0 +1,71 @@
+.categories button {
+    width: 131px;
+    height: 61px;
+    background-color: rgba(250, 145, 158, 1);
+    border-style: outset;
+    border-radius: 5px;
+    font-family: 'PingFangSC-Regular', 'PingFang SC';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: black;
+}
+
+.items {
+    width: 1080px;
+    height: 290px;
+    margin: 0 auto;
+
+}
+
+
+.item {
+
+    width: 350px;
+    height: 140px;
+    float: left;
+    margin-left: 10px;
+
+}
+
+.item-pic {
+
+    width: 126px;
+    height: 140px;
+    float: left;
+}
+
+.item-text {
+    width: 204px;
+    height: 140px;
+    float: left;
+    font-family: 'PingFang SC';
+    font-size: 13px;
+    color: #333333;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.item-heading {
+    font-weight: bold;
+}
+
+.item-pic img {
+    border-width: 0px;
+    margin: 5px;
+
+    width: 116px;
+    height: 130px;
+}
+
+
+.category {
+    width: 980px;
+
+    margin: 0 auto;
+    font-family: 'PingFang SC';
+    font-size: 23px;
+    color: #C7737D;
+    font-weight: bold;
+}
