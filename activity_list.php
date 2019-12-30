@@ -24,11 +24,11 @@
 
 <body>
     <nav class="global-nav">
-        <a href="index.html" id="global-nav-logo">
+        <a href="index.php" id="global-nav-logo">
             <img src="img/logo.png" height="100%">
         </a>
         <div class="nav-item left-nav-item active">
-            <a href="index.html">首页</a>
+            <a href="index.php">首页</a>
         </div>
         <div class="nav-item left-nav-item">
             <a href="activity_list.php">分类</a>
