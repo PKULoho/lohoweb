@@ -1,28 +1,22 @@
-.AllLeft {
-    width: 833px;
-    margin: px 20px 0px 80px;
-    float: left;
-    display: block;
-    position: absolute;
-    left: 285px;
-    top: 127px;
-
+.main-container {
+    width: 1110px;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
+.AllLeft {
+    width: 780px;
+    display: inline-block;
+}
 
 .details {
     border-width: 1px;
     border-style: solid;
-
-    width: 833px;
-
-
 }
 
 .ActivityDetailsUp {
     height: 200px;
-    width: 833px;
-
 }
 
 .UpPic {
@@ -32,7 +26,7 @@
 }
 
 .UpText {
-    width: 630px;
+    width: 570px;
     height: 208px;
     float: left;
     font-size: 18px;
@@ -43,37 +37,28 @@
     width: 102px;
     height: 38px;
     background-color: white;
-
     border-style: outset;
     border-radius: 5px;
     color: black;
     float: left;
     margin-top: 10px;
 }
-}
 
 .ActivityDetailsDown {
-    width: 833px;
+    width: 760px;
     font-size: 15px;
     margin-left: 10px;
 }
 
 .recommend_right {
-    width: 340px;
+    width: 290px;
     margin: 0px 20px 0px 20px;
-
-    position: absolute;
-    left: 1233px;
-    top: 127px;
+    float: right;
 }
-
 
 .ActivityDetailsUp img {
     border-width: 0px;
     margin: 5px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
     width: 183px;
     height: 208px;
 }
@@ -93,17 +78,23 @@
 }
 
 .comment h1 {
-
-
     font-family: 'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC';
     font-weight: 650;
     font-style: normal;
     font-size: 18px;
     color: #C7737D;
-
-
     margin-top: 0;
     margin-bottom: 8px;
     padding-left: 20px;
     /*regular*/
+}
+
+.collection-items .collection-item .activity-info {
+    width: 150px;
+}
+
+.collection-items .collection-item .activity-info div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
