@@ -58,6 +58,16 @@
     cursor: pointer;
 }
 
+.UpText a{
+    color: #f76968;
+    text-decoration: none;
+}
+
+.UpText a:visited{
+    color: #f76968;
+    text-decoration: none;
+}
+
 .ActivityDetailsDown {
     width: 760px;
     font-size: 15px;
