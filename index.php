@@ -83,6 +83,70 @@ $sqlname = 'loho';
 //连接数据库
 $mysqli = new mysqli('localhost', $username, $password, $sqlname);
 
+//下面先搞智能推荐的输出
+$file = fopen("RULES.csv","r",";");
+$yuanyin=array();
+$jieguo=array();
+$recommend=array();
+while(! feof($file))
+  {
+  array_push($yuanyin,fgetcsv($file)[0]);
+  array_push($jieguo,fgetcsv($file)[1]);
+  }
+$sql_query = "SELECT user_name,joined_act_id FROM joined_act";
+$ppp = $mysqli->query($sql_query, MYSQLI_STORE_RESULT);
+
+$alreadybought=$ppp->fetch_row();
+
+
+echo'<br>
+<div class="category" id="zhineng">智能推荐</div>
+<div class="items">';
+
+    $sql_query = "SELECT act_id,act_name,act_first_day,act_place FROM act_info WHERE act_id>25";
+    $itemlist = $mysqli->query($sql_query, MYSQLI_STORE_RESULT);
+
+    //计数，智能推荐显示六个活动
+    $itemcount=0;
+    while ((list($id,$name,$first,$place) = $itemlist->fetch_row()) && $itemcount<6) {
+        echo '<a href="'.$id.'.html">
+        <div class="item">
+            <div class="item-pic"><img src="pic/'.$id.'.png"></div>
+            <div class="item-text">
+                <p class="item-heading">'.$name.'</p>
+                <p>活动时间：'.$first.'</p>
+                <p>活动地点：'.$place.'</p>
+
+            </div>
+
+        </div>
+    </a>';
+    $itemcount=$itemcount+1;
+    }
+
+    //如果不足6个活动，用其他活动补齐6个
+    $sql_query = "SELECT act_id,act_name,act_first_day,act_place FROM act_info WHERE act_first_day > '2020-01-03'";
+    $itemlist = $mysqli->query($sql_query, MYSQLI_STORE_RESULT);
+    while ((list($id,$name,$first,$place) = $itemlist->fetch_row()) && $itemcount<6) {
+        echo '<a href="'.$id.'.html">
+        <div class="item">
+            <div class="item-pic"><img src="pic/'.$id.'.png"></div>
+            <div class="item-text">
+                <p class="item-heading">'.$name.'</p>
+                <p>活动时间：'.$first.'</p>
+                <p>活动地点：'.$place.'</p>
+
+            </div>
+
+        </div>
+    </a>';
+    $itemcount=$itemcount+1;
+    }
+
+    
+    echo '</div>';
+
+
 
 $pinyin=array('jiangzuo','bisai','yanchu','tiyan','zhiyuan','shehui','luntan','qita');
 $chinese=array('讲座','比赛','演出','体验类活动','志愿活动','社会实践','论坛/会议','其他');
