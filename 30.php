@@ -13,8 +13,7 @@
 
     <script>
         function replaceDoc() {
-            window.location.replace("./activity_details.html")
-        }
+window.location.replace("./30.php")        }
     </script>
 </head>
 

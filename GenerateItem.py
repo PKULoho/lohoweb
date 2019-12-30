@@ -20,6 +20,7 @@ for i in range(1, 61, 1):
     intro = booksheet.cell_value(i, 4)
 
     lines[6] = name
+    lines[16]='window.location.replace("./'+str(i)+'.php")'
     lines[75] = '"pic/' + str(i) + '.png"'
     lines[79] = name
     lines[82] = time

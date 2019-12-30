@@ -13,8 +13,7 @@ Allen & Overy主题演讲赛    </title>
 
     <script>
         function replaceDoc() {
-            window.location.replace("./activity_details.html")
-        }
+window.location.replace("./15.php")        }
     </script>
 </head>
 

@@ -13,8 +13,7 @@ Baruch+CMU MSCF学长约你线下解读2019美国金融工程申请白皮书    
 
     <script>
         function replaceDoc() {
-            window.location.replace("./activity_details.html")
-        }
+window.location.replace("./48.php")        }
     </script>
 </head>
 
