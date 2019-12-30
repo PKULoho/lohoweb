@@ -36,12 +36,13 @@
 .UpText button {
     width: 102px;
     height: 38px;
-    background-color: white;
+    background-color: darkorange;
     border-style: outset;
     border-radius: 5px;
     color: black;
     float: left;
     margin-top: 10px;
+
 }
 
 .ActivityDetailsDown {
@@ -63,7 +64,7 @@
     height: 208px;
 }
 
-.comment button {
+.commentsection button {
     width: 60px;
     height: 30px;
     background-color: rgba(250, 145, 158, 1);
@@ -77,7 +78,7 @@
     color: #FFFFFF;
 }
 
-.comment h1 {
+.commentsection h1 {
     font-family: 'PingFangSC-Semibold', 'PingFang SC Semibold', 'PingFang SC';
     font-weight: 650;
     font-style: normal;
@@ -97,4 +98,52 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+.comments {
+    width: 780px;
+    font-size: 12px;
+}
+
+.comment {
+    width: 780px;
+    height: 90px;
+    border-width: 1px;
+    border-style: solid;
+
+
+}
+
+.userinfo {
+
+    width: 60px;
+    height: 90px;
+    float: left;
+
+}
+
+.touxiang {
+    width: 60px;
+    height: 60px;
+}
+
+.touxiang img {
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+.user_name {
+    width: 60px;
+    height: 30px;
+    text-align: center;
+}
+
+.message {
+    width: 712px;
+    height: 83px;
+    float: left;
+    margin: 3px 3px 3px 3px;
 }
