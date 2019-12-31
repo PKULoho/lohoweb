@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>评分组件</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <style>
+        .tests{
+            margin-left: 70px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        p{
+            margin-left: 70px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>综合</p>
+    <div id="test1" class="tests"></div>
+    <p>活动趣味</p>
+    <div id="test2" class="tests"></div>
+    <p>活动意义</p>
+    <div id="test3" class="tests"></div>
+    <p>活动秩序</p>
+    <div id="test4" class="tests"></div>
+    <script src="../layui/layui.js"></script>
+    <script>
+        layui.use('rate', function () {
+            var rate = layui.rate;
+
+            //渲染
+            var ins1 = rate.render({
+                elem: '#test1'  //绑定元素
+                , text: true
+                , value: 0
+                , setText: function (value) {
+                    if (value > 0)
+                        this.span.text(value + "星");
+                    else this.span.text(" ");
+                }
+            });
+
+            var rate2 = layui.rate;
+
+            var ins2 = rate2.render({
+                elem: '#test2'  //绑定元素
+                , text: true
+                , value: 0
+                , setText: function (value) {
+                    if (value > 0)
+                        this.span.text(value + "星");
+                    else this.span.text(" ");
+                }
+            });
+
+            var rate3 = layui.rate;
+
+            var ins3 = rate3.render({
+                elem: '#test3'  //绑定元素
+                , text: true
+                , value: 0
+                , setText: function (value) {
+                    if (value > 0)
+                        this.span.text(value + "星");
+                    else this.span.text(" ");
+                }
+            });
+
+            var rate4 = layui.rate;
+
+            var ins4 = rate4.render({
+                elem: '#test4'  //绑定元素
+                , text: true
+                , value: 0
+                , setText: function (value) {
+                    if (value > 0)
+                        this.span.text(value + "星");
+                    else this.span.text(" ");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

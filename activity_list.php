@@ -48,6 +48,9 @@
             <div class="nav-item right-nav-item">
                 <b>' . $_COOKIE['usernickname'] . '</b>
                 <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
+            </div>
+            <div class="nav-item right-nav-item" id="reminder">
+                <a>提醒</a><div class="reminder-list"><ul><li>>&nbsp;&nbsp;您报名的“北大剧星风采大赛初赛”将于今天举行</li><li>>“数学文化节”的时间更改为2020年4月2日</li></ul></div>
             </div>';
         } else {
             echo '

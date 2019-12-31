@@ -54,6 +54,10 @@
     margin-left: 0;
 }
 
+.UpText .button{
+    font-size: 13px;
+}
+
 .UpText .button:hover{
     cursor: pointer;
 }

@@ -29,13 +29,13 @@ body {
 .global-nav .nav-item a {
     color: #ffffff;
     text-decoration-line: none;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .global-nav .nav-item b {
     color: #ffffff;
     text-decoration-line: none;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .global-nav .nav-item a:hover {
@@ -71,14 +71,14 @@ body {
     margin-right: 80px;
 }
 
-.global-nav .search-bar{
+.global-nav .search-bar {
     font-size: 0;
     line-height: 80px;
     float: left;
     margin-left: 40px;
 }
 
-.global-nav .search-bar input{
+.global-nav .search-bar input {
     height: 30px;
     vertical-align: middle;
     width: 300px;
@@ -89,11 +89,11 @@ body {
     padding-left: 10px;
 }
 
-.global-nav .search-bar input:focus{
+.global-nav .search-bar input:focus {
     outline: none;
 }
 
-.global-nav .search-bar button{
+.global-nav .search-bar button {
     height: 36px;
     vertical-align: middle;
     width: 80px;
@@ -105,13 +105,46 @@ body {
     border-style: solid;
 }
 
-.global-nav .search-bar button:hover{
+.global-nav .search-bar button:hover {
     cursor: pointer;
     background-color: #c76a75;
 }
 
-.global-nav .search-bar button:focus{
+.global-nav .search-bar button:focus {
     outline: none;
+}
+
+#reminder:hover a{
+    cursor: pointer;
+}
+
+#reminder:hover .reminder-list{
+    display: block;
+}
+
+.reminder-list {
+    display: none;
+    position: fixed;
+    background-color: #F9F9F9;
+    padding: 10px 20px 10px 20px;
+    width: 250px;
+    box-shadow: 0px 0px 5px #555;
+}
+
+.reminder-list ul {
+    padding: 0;
+    vertical-align: middle;
+}
+
+.reminder-list li {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 0;
+    margin-left: 0;
+    font-size: 14px;
+    line-height: 18px;
+    color: #333;
+    vertical-align: middle;
 }
 
 .fix {
