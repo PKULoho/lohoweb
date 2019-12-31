@@ -236,3 +236,7 @@ hr {
 .global-nav .search-bar button {
     line-height: 36px;
 }
+
+.list_right .collection-item .activity-info {
+    width: 200px;
+}
