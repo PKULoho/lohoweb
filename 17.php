@@ -4,17 +4,27 @@
 <head>
     <meta charset="utf-8">
     <title>
-极客星空沙龙第四期    </title>
+极客星空沙龙第四期</title>
     <link rel="icon" type="image/png" href="ico/logo.png"/>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+    <script src="activity_details.js"></script>
+
+    <script>
+        function replaceDoc() {
+window.location.replace("./17.php")    </script>
+
     <link rel="stylesheet" href="global_navigation.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="activity_list.css">
     <link rel="stylesheet" href="activity_details.css">
 
-    <script>
-        function replaceDoc() {
-window.location.replace("./17.php")        }
-    </script>
+    <style>
+        .global-nav .search-bar input{
+            height:32px;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,13 +48,15 @@ window.location.replace("./17.php")        }
         if (isset($_COOKIE['username'])) {
             echo '
             <div class="nav-item right-nav-item">
-    <a href="user_center_userinfo.php">个人中心</a>
-    </div>
-    <div class="nav-item right-nav-item">
-        <b>' . $_COOKIE['usernickname'] . '</b>
-        <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
-    </div>
-    ';
+                <a href="user_center_userinfo.php">个人中心</a>
+            </div>
+            <div class="nav-item right-nav-item">
+                <b>' . $_COOKIE['usernickname'] . '</b>
+                <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
+            </div>
+            <div class="nav-item right-nav-item" id="reminder">
+                <a>提醒</a><div class="reminder-list"><ul><li>>&nbsp;&nbsp;您报名的“北大剧星风采大赛初赛”将于今天举行</li><li>>“数学文化节”的时间更改为2020年4月2日</li></ul></div>
+            </div>';
     } else {
     echo '
     <div class="nav-item right-nav-item">
@@ -71,19 +83,19 @@ window.location.replace("./17.php")        }
             <div class="ActivityDetailsUp">
 
                 <div class="UpPic"><img src=
-"pic/17.png"                      id="activity_pic"></div>
+"pic/17.png"                     id="activity_pic"></div>
                 <div class="UpText">
                     <div>活动名称：
-极客星空沙龙第四期                </div>
+极客星空沙龙第四期 </div>
                     <div>活动时间：
-2020年2月19日                    </div>
+2020年2月19日 </div>
                     <div>活动主办方：<a href="activity_host.html">
-北京大学极客实验室                    </a></div>
+北京大学极客实验室   </a></div>
                     <div>官方网页链接：<a href=
-"https://mp.weixin.qq.com/s/PmYkXlprC8ApCd6r-0q7eA"                        >
-https://mp.weixin.qq.com/s/PmYkXlprC8ApCd6r-0q7eA                    </a>
+"https://mp.weixin.qq.com/s/PmYkXlprC8ApCd6r-0q7eA"            >
+https://mp.weixin.qq.com/s/PmYkXlprC8ApCd6r-0q7eA        </a>
                     </div>
-                    <div>评分：10.0</div>
+                    <div>综合评分:10.0&nbsp;&nbsp;趣味:10.0&nbsp;&nbsp;意义:10.0&nbsp;&nbsp;秩序:10.0</div>
 
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_wishlist.png"
                                                                                      class="icon">加入心愿单
@@ -94,7 +106,7 @@ https://mp.weixin.qq.com/s/PmYkXlprC8ApCd6r-0q7eA                    </a>
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_apply.png"
                                                                                      class="icon">立即报名
                     </button>
-                    <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_rate.png"
+                    <button class="button" type="submit"><img src="ico/icon_rate.png"
                                                                                      class="icon">评分
                     </button>
                 </div>
@@ -112,11 +124,10 @@ https://mp.weixin.qq.com/s/PmYkXlprC8ApCd6r-0q7eA                    </a>
 
                 <br>
 
+
 关于机器人研究、AI研究、游戏研究、影像研究，这些并非完全来自于数字艺术的软件开发或者技术研发，而是基于对未来人类经济发展、未来人类生存的方式和价值观进行科技手段的介入和研究，这是构建未来社会城市形成的必然的途径。
 艺术与科技对话，艺术家们以多种不同的技术、艺术手段为载体和媒介，共同探讨人类、科技与未来。“艺术与科技”新学科，针对“设计作为构建新生活方式”的议题展开阐述，极具启示性、前瞻性的观念为我们理解当下及未来的设计现象提供新的思考契机。
 艺术与科技的呈现的不仅限于数字媒介，它还包括了其他全新的高科技技术，不仅涉及计算机生成技术，同时也结合了人工智能、大数据、VR、AR等虚拟技术。建议艺术家们在今后的创作中能更多运用新兴科技，与科学家、工程师进行合作。艺术与技术正如人脑与AI的博弈一般，催生与激发着彼此未来发展历程。
-
-
             </div>
             <br><br>
         </div>

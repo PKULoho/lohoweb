@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>
-青年发展与社会创新论坛</title>
+数学文化节    
+</title>
     <link rel="icon" type="image/png" href="ico/logo.png"/>
 
     <link rel="stylesheet" href="layui/css/layui.css">
@@ -13,7 +14,8 @@
 
     <script>
         function replaceDoc() {
-window.location.replace("./19.php")    </script>
+window.location.replace("./1.php")        }
+    </script>
 
     <link rel="stylesheet" href="global_navigation.css">
     <link rel="stylesheet" href="footer.css">
@@ -83,17 +85,23 @@ window.location.replace("./19.php")    </script>
             <div class="ActivityDetailsUp">
 
                 <div class="UpPic"><img src=
-"pic/19.png"                     id="activity_pic"></div>
+"pic/1.png" 
+                     id="activity_pic"></div>
                 <div class="UpText">
                     <div>活动名称：
-青年发展与社会创新论坛 </div>
+数学文化节               
+ </div>
                     <div>活动时间：
-2019年11月29日 </div>
+2020年2月7日                   
+ </div>
                     <div>活动主办方：<a href="activity_host.html">
-北京大学创业训练营   </a></div>
+数院学生会                 
+   </a></div>
                     <div>官方网页链接：<a href=
-"https://mp.weixin.qq.com/s/QJOAUZOnqNj-PagUNRJWPQ"            >
-https://mp.weixin.qq.com/s/QJOAUZOnqNj-PagUNRJWPQ        </a>
+"https://mp.weixin.qq.com/s/vkojb5lwadxQ9hwqwUXSJg"            
+            >
+https://mp.weixin.qq.com/s/vkojb5lwadxQ9hwqwUXSJg            
+        </a>
                     </div>
                     <div>综合评分:10.0&nbsp;&nbsp;趣味:10.0&nbsp;&nbsp;意义:10.0&nbsp;&nbsp;秩序:10.0</div>
 
@@ -125,8 +133,7 @@ https://mp.weixin.qq.com/s/QJOAUZOnqNj-PagUNRJWPQ        </a>
                 <br>
 
 
- 勇于创新是青年人的特质，也是当今社会的特质。随着社会领域的不断丰富、职业发展个性化程度的不断提升，当代青年人生涯选择的思路越来越开阔、方向越来越多元。这既带来“百舸争流千帆竞”，提供社会发展的动力，也导致“乱花渐欲迷人眼”，增加青年人未来选择的难度。
-      如何让青年人特别是大学生在体现自身价值的同时承担社会发展的使命？青年人如何发挥创造的热情？如何以创新的方式推动社区的变革？可持续的创新发展模式是什么样的？青年人如何通过社会创新的实践获得对自身生涯发展的启示？处于生涯不同阶段的专家学者、社会企业家以及青年学生将分别从各自的角度及其独特的探索经历出发，在本次论坛共议“青年发展与社会创新”。
+
 
             </div>
             <br><br>

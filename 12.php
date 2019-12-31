@@ -4,17 +4,27 @@
 <head>
     <meta charset="utf-8">
     <title>
-新东方个性化规划助你直通顶尖法学院    </title>
+新东方个性化规划助你直通顶尖法学院</title>
     <link rel="icon" type="image/png" href="ico/logo.png"/>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+    <script src="activity_details.js"></script>
+
+    <script>
+        function replaceDoc() {
+window.location.replace("./12.php")    </script>
+
     <link rel="stylesheet" href="global_navigation.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="activity_list.css">
     <link rel="stylesheet" href="activity_details.css">
 
-    <script>
-        function replaceDoc() {
-window.location.replace("./12.php")        }
-    </script>
+    <style>
+        .global-nav .search-bar input{
+            height:32px;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,13 +48,15 @@ window.location.replace("./12.php")        }
         if (isset($_COOKIE['username'])) {
             echo '
             <div class="nav-item right-nav-item">
-    <a href="user_center_userinfo.php">个人中心</a>
-    </div>
-    <div class="nav-item right-nav-item">
-        <b>' . $_COOKIE['usernickname'] . '</b>
-        <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
-    </div>
-    ';
+                <a href="user_center_userinfo.php">个人中心</a>
+            </div>
+            <div class="nav-item right-nav-item">
+                <b>' . $_COOKIE['usernickname'] . '</b>
+                <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
+            </div>
+            <div class="nav-item right-nav-item" id="reminder">
+                <a>提醒</a><div class="reminder-list"><ul><li>>&nbsp;&nbsp;您报名的“北大剧星风采大赛初赛”将于今天举行</li><li>>“数学文化节”的时间更改为2020年4月2日</li></ul></div>
+            </div>';
     } else {
     echo '
     <div class="nav-item right-nav-item">
@@ -71,19 +83,19 @@ window.location.replace("./12.php")        }
             <div class="ActivityDetailsUp">
 
                 <div class="UpPic"><img src=
-"pic/12.png"                      id="activity_pic"></div>
+"pic/12.png"                     id="activity_pic"></div>
                 <div class="UpText">
                     <div>活动名称：
-新东方个性化规划助你直通顶尖法学院                </div>
+新东方个性化规划助你直通顶尖法学院 </div>
                     <div>活动时间：
-2020年1月10日                    </div>
+2020年1月10日 </div>
                     <div>活动主办方：<a href="activity_host.html">
-法学院学生会                    </a></div>
+法学院学生会   </a></div>
                     <div>官方网页链接：<a href=
-"https://mp.weixin.qq.com/s/artvyxBDLNn-dWGO7XKT3g"                        >
-https://mp.weixin.qq.com/s/artvyxBDLNn-dWGO7XKT3g                    </a>
+"https://mp.weixin.qq.com/s/artvyxBDLNn-dWGO7XKT3g"            >
+https://mp.weixin.qq.com/s/artvyxBDLNn-dWGO7XKT3g        </a>
                     </div>
-                    <div>评分：10.0</div>
+                    <div>综合评分:10.0&nbsp;&nbsp;趣味:10.0&nbsp;&nbsp;意义:10.0&nbsp;&nbsp;秩序:10.0</div>
 
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_wishlist.png"
                                                                                      class="icon">加入心愿单
@@ -94,7 +106,7 @@ https://mp.weixin.qq.com/s/artvyxBDLNn-dWGO7XKT3g                    </a>
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_apply.png"
                                                                                      class="icon">立即报名
                     </button>
-                    <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_rate.png"
+                    <button class="button" type="submit"><img src="ico/icon_rate.png"
                                                                                      class="icon">评分
                     </button>
                 </div>
@@ -112,6 +124,7 @@ https://mp.weixin.qq.com/s/artvyxBDLNn-dWGO7XKT3g                    </a>
 
                 <br>
 
+
 想申请英美牛校法学院却对申请信息知之甚少？
 想一探究竟顶级法学院大神们是如何顺利收到女神校offer？
 PS应该怎么写？
@@ -123,8 +136,6 @@ PS应该怎么写？
 讲讲法学申请那些事儿
 来自北京前途英国、美研条线的留学大咖分享法学备考干货，解读真实申请案例，带给你最有效率的留学规划时间轴，别犹豫啦，快来和我们在讲座中一探究竟吧！
 好风凭借力，助你上青云！
-
-
             </div>
             <br><br>
         </div>

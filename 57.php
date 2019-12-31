@@ -4,17 +4,27 @@
 <head>
     <meta charset="utf-8">
     <title>
-《两杆大烟枪》    </title>
+《两杆大烟枪》</title>
     <link rel="icon" type="image/png" href="ico/logo.png"/>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+    <script src="activity_details.js"></script>
+
+    <script>
+        function replaceDoc() {
+window.location.replace("./57.php")    </script>
+
     <link rel="stylesheet" href="global_navigation.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="activity_list.css">
     <link rel="stylesheet" href="activity_details.css">
 
-    <script>
-        function replaceDoc() {
-window.location.replace("./57.php")        }
-    </script>
+    <style>
+        .global-nav .search-bar input{
+            height:32px;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,13 +48,15 @@ window.location.replace("./57.php")        }
         if (isset($_COOKIE['username'])) {
             echo '
             <div class="nav-item right-nav-item">
-    <a href="user_center_userinfo.php">个人中心</a>
-    </div>
-    <div class="nav-item right-nav-item">
-        <b>' . $_COOKIE['usernickname'] . '</b>
-        <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
-    </div>
-    ';
+                <a href="user_center_userinfo.php">个人中心</a>
+            </div>
+            <div class="nav-item right-nav-item">
+                <b>' . $_COOKIE['usernickname'] . '</b>
+                <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
+            </div>
+            <div class="nav-item right-nav-item" id="reminder">
+                <a>提醒</a><div class="reminder-list"><ul><li>>&nbsp;&nbsp;您报名的“北大剧星风采大赛初赛”将于今天举行</li><li>>“数学文化节”的时间更改为2020年4月2日</li></ul></div>
+            </div>';
     } else {
     echo '
     <div class="nav-item right-nav-item">
@@ -71,19 +83,19 @@ window.location.replace("./57.php")        }
             <div class="ActivityDetailsUp">
 
                 <div class="UpPic"><img src=
-"pic/57.png"                      id="activity_pic"></div>
+"pic/57.png"                     id="activity_pic"></div>
                 <div class="UpText">
                     <div>活动名称：
-《两杆大烟枪》                </div>
+《两杆大烟枪》 </div>
                     <div>活动时间：
-2020年2月7日                    </div>
+2020年2月7日 </div>
                     <div>活动主办方：<a href="activity_host.html">
-北大影协                    </a></div>
+北大影协   </a></div>
                     <div>官方网页链接：<a href=
-"https://mp.weixin.qq.com/s/C8_1aIQuguUGA9MlmCvuHg"                        >
-https://mp.weixin.qq.com/s/C8_1aIQuguUGA9MlmCvuHg                    </a>
+"https://mp.weixin.qq.com/s/C8_1aIQuguUGA9MlmCvuHg"            >
+https://mp.weixin.qq.com/s/C8_1aIQuguUGA9MlmCvuHg        </a>
                     </div>
-                    <div>评分：10.0</div>
+                    <div>综合评分:10.0&nbsp;&nbsp;趣味:10.0&nbsp;&nbsp;意义:10.0&nbsp;&nbsp;秩序:10.0</div>
 
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_wishlist.png"
                                                                                      class="icon">加入心愿单
@@ -94,7 +106,7 @@ https://mp.weixin.qq.com/s/C8_1aIQuguUGA9MlmCvuHg                    </a>
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_apply.png"
                                                                                      class="icon">立即报名
                     </button>
-                    <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_rate.png"
+                    <button class="button" type="submit"><img src="ico/icon_rate.png"
                                                                                      class="icon">评分
                     </button>
                 </div>
@@ -112,11 +124,10 @@ https://mp.weixin.qq.com/s/C8_1aIQuguUGA9MlmCvuHg                    </a>
 
                 <br>
 
+
 艾迪思维敏捷，是个玩牌高手。在三个好友的支持下，艾迪携巨资参加了黑社会的高额赌局，不想落入圈套，欠下50万的赌债。艾迪一周内要还清50万债务，逾期每天取一个朋友的一根手指。但其实被黑社会看中的是艾迪的房产，还有他父亲的酒吧。
 为了还清赌债，艾迪和朋友们绞尽脑汁，最后决定打劫一群毒贩，并为打劫购买了两杆老式烟枪。可是他们不知道，这看似简单的抢劫案背后，更有厉害的角色参与其中。他们手里的两杆破烟枪也隐藏着不少故事。
 本片是英国独立电影导演盖·里奇的处女作，放映后获得强烈反响。多线叙事的手法、风格独特的配乐、黑色幽默的对白以及强烈的英伦风格成就了这部黑色喜剧电影经典。导演并不试图在本片中阐述深刻哲理，而是选择用后现代的电影语言展现了经典电影模式之外的另一种可能。我们会在放映结束后与大家展开交流分享，欢迎大家前来体验这场奇妙的视听盛宴。
-
-
             </div>
             <br><br>
         </div>

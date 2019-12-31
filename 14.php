@@ -4,17 +4,27 @@
 <head>
     <meta charset="utf-8">
     <title>
-法学院第十一届“君合杯”模拟法庭比赛决赛    </title>
+法学院第十一届“君合杯”模拟法庭比赛决赛</title>
     <link rel="icon" type="image/png" href="ico/logo.png"/>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+    <script src="activity_details.js"></script>
+
+    <script>
+        function replaceDoc() {
+window.location.replace("./14.php")    </script>
+
     <link rel="stylesheet" href="global_navigation.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="activity_list.css">
     <link rel="stylesheet" href="activity_details.css">
 
-    <script>
-        function replaceDoc() {
-window.location.replace("./14.php")        }
-    </script>
+    <style>
+        .global-nav .search-bar input{
+            height:32px;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,13 +48,15 @@ window.location.replace("./14.php")        }
         if (isset($_COOKIE['username'])) {
             echo '
             <div class="nav-item right-nav-item">
-    <a href="user_center_userinfo.php">个人中心</a>
-    </div>
-    <div class="nav-item right-nav-item">
-        <b>' . $_COOKIE['usernickname'] . '</b>
-        <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
-    </div>
-    ';
+                <a href="user_center_userinfo.php">个人中心</a>
+            </div>
+            <div class="nav-item right-nav-item">
+                <b>' . $_COOKIE['usernickname'] . '</b>
+                <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
+            </div>
+            <div class="nav-item right-nav-item" id="reminder">
+                <a>提醒</a><div class="reminder-list"><ul><li>>&nbsp;&nbsp;您报名的“北大剧星风采大赛初赛”将于今天举行</li><li>>“数学文化节”的时间更改为2020年4月2日</li></ul></div>
+            </div>';
     } else {
     echo '
     <div class="nav-item right-nav-item">
@@ -71,19 +83,19 @@ window.location.replace("./14.php")        }
             <div class="ActivityDetailsUp">
 
                 <div class="UpPic"><img src=
-"pic/14.png"                      id="activity_pic"></div>
+"pic/14.png"                     id="activity_pic"></div>
                 <div class="UpText">
                     <div>活动名称：
-法学院第十一届“君合杯”模拟法庭比赛决赛                </div>
+法学院第十一届“君合杯”模拟法庭比赛决赛 </div>
                     <div>活动时间：
-2019年9月5日                    </div>
+2019年9月5日 </div>
                     <div>活动主办方：<a href="activity_host.html">
-法学院学生会                    </a></div>
+法学院学生会   </a></div>
                     <div>官方网页链接：<a href=
-"https://mp.weixin.qq.com/s/dhUAXn65QfzAUZhsO489Pw"                        >
-https://mp.weixin.qq.com/s/dhUAXn65QfzAUZhsO489Pw                    </a>
+"https://mp.weixin.qq.com/s/dhUAXn65QfzAUZhsO489Pw"            >
+https://mp.weixin.qq.com/s/dhUAXn65QfzAUZhsO489Pw        </a>
                     </div>
-                    <div>评分：10.0</div>
+                    <div>综合评分:10.0&nbsp;&nbsp;趣味:10.0&nbsp;&nbsp;意义:10.0&nbsp;&nbsp;秩序:10.0</div>
 
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_wishlist.png"
                                                                                      class="icon">加入心愿单
@@ -94,7 +106,7 @@ https://mp.weixin.qq.com/s/dhUAXn65QfzAUZhsO489Pw                    </a>
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_apply.png"
                                                                                      class="icon">立即报名
                     </button>
-                    <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_rate.png"
+                    <button class="button" type="submit"><img src="ico/icon_rate.png"
                                                                                      class="icon">评分
                     </button>
                 </div>
@@ -112,11 +124,10 @@ https://mp.weixin.qq.com/s/dhUAXn65QfzAUZhsO489Pw                    </a>
 
                 <br>
 
+
 历时近三个月的北京大学法学院第十一届“君合杯”模拟法庭比赛将在本周画上一个句号。我们感谢所有选手在比赛当中展现出来的风采，我们期盼决赛之夜两组选手的精彩对决，我们欢迎大家来到现场见证比赛！
 北京大学英杰交流中心月光厅
 5月18日 18：30-21：00
-
-
             </div>
             <br><br>
         </div>

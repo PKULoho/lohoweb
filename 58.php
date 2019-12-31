@@ -4,17 +4,27 @@
 <head>
     <meta charset="utf-8">
     <title>
-《你的名字》    </title>
+《你的名字》</title>
     <link rel="icon" type="image/png" href="ico/logo.png"/>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+    <script src="activity_details.js"></script>
+
+    <script>
+        function replaceDoc() {
+window.location.replace("./58.php")    </script>
+
     <link rel="stylesheet" href="global_navigation.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="activity_list.css">
     <link rel="stylesheet" href="activity_details.css">
 
-    <script>
-        function replaceDoc() {
-window.location.replace("./58.php")        }
-    </script>
+    <style>
+        .global-nav .search-bar input{
+            height:32px;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,13 +48,15 @@ window.location.replace("./58.php")        }
         if (isset($_COOKIE['username'])) {
             echo '
             <div class="nav-item right-nav-item">
-    <a href="user_center_userinfo.php">个人中心</a>
-    </div>
-    <div class="nav-item right-nav-item">
-        <b>' . $_COOKIE['usernickname'] . '</b>
-        <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
-    </div>
-    ';
+                <a href="user_center_userinfo.php">个人中心</a>
+            </div>
+            <div class="nav-item right-nav-item">
+                <b>' . $_COOKIE['usernickname'] . '</b>
+                <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
+            </div>
+            <div class="nav-item right-nav-item" id="reminder">
+                <a>提醒</a><div class="reminder-list"><ul><li>>&nbsp;&nbsp;您报名的“北大剧星风采大赛初赛”将于今天举行</li><li>>“数学文化节”的时间更改为2020年4月2日</li></ul></div>
+            </div>';
     } else {
     echo '
     <div class="nav-item right-nav-item">
@@ -71,19 +83,19 @@ window.location.replace("./58.php")        }
             <div class="ActivityDetailsUp">
 
                 <div class="UpPic"><img src=
-"pic/58.png"                      id="activity_pic"></div>
+"pic/58.png"                     id="activity_pic"></div>
                 <div class="UpText">
                     <div>活动名称：
-《你的名字》                </div>
+《你的名字》 </div>
                     <div>活动时间：
-2020年2月7日                    </div>
+2020年2月7日 </div>
                     <div>活动主办方：<a href="activity_host.html">
-北大影协                    </a></div>
+北大影协   </a></div>
                     <div>官方网页链接：<a href=
-"https://mp.weixin.qq.com/s/ywDMnvsxRGqWeYm_atsCTw"                        >
-https://mp.weixin.qq.com/s/ywDMnvsxRGqWeYm_atsCTw                    </a>
+"https://mp.weixin.qq.com/s/ywDMnvsxRGqWeYm_atsCTw"            >
+https://mp.weixin.qq.com/s/ywDMnvsxRGqWeYm_atsCTw        </a>
                     </div>
-                    <div>评分：10.0</div>
+                    <div>综合评分:10.0&nbsp;&nbsp;趣味:10.0&nbsp;&nbsp;意义:10.0&nbsp;&nbsp;秩序:10.0</div>
 
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_wishlist.png"
                                                                                      class="icon">加入心愿单
@@ -94,7 +106,7 @@ https://mp.weixin.qq.com/s/ywDMnvsxRGqWeYm_atsCTw                    </a>
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_apply.png"
                                                                                      class="icon">立即报名
                     </button>
-                    <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_rate.png"
+                    <button class="button" type="submit"><img src="ico/icon_rate.png"
                                                                                      class="icon">评分
                     </button>
                 </div>
@@ -112,11 +124,10 @@ https://mp.weixin.qq.com/s/ywDMnvsxRGqWeYm_atsCTw                    </a>
 
                 <br>
 
+
 在远离城市的小山村，住着巫女世家出身的高中女孩宫水三叶。校园和家庭的原因本就让她充满烦恼，许是受那颗神秘彗星的影响，三叶在梦中就会变成一个住在东京的高中男孩。那里有陌生的同学和朋友，有亲切的前辈和繁华的街道，一切都是如此诱人而真实。另一方面，住在东京的高中男孩立花泷则总在梦里来到陌生的小山村，以女孩子的身份过着全新的生活，他们都以他者的角度体验着对方的人生，然而，这背后却有锥心的现实。
  梦中就能交换灵魂，黄昏之时时空就会错乱，结绳就能连接，口嚼酒能回到过去，万物皆是神灵，错过的也终会相遇。陨石散落的瞬间野田洋次郎的乐声响起，让灾难也和美好相连；在最终泷改变了过去的这个情绪高点，却让彼此相互遗忘，就像日本人爱的凋谢在最美丽时刻的樱花，这部电影也透出浓郁的物哀之美。新海诚给我们编织了一个美丽的童话梦。
 其实放这部电影也有笔者的私心，想要弥补当初上映时没有去看的遗憾。在繁忙的学习生活中，来抽空看一部轻松的电影吧。
-
-
             </div>
             <br><br>
         </div>

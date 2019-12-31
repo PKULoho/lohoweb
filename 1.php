@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>
-数学文化节    </title>
+数学文化节</title>
     <link rel="icon" type="image/png" href="ico/logo.png"/>
 
     <link rel="stylesheet" href="layui/css/layui.css">
@@ -13,8 +13,7 @@
 
     <script>
         function replaceDoc() {
-window.location.replace("./1.php")        }
-    </script>
+window.location.replace("./1.php")    </script>
 
     <link rel="stylesheet" href="global_navigation.css">
     <link rel="stylesheet" href="footer.css">
@@ -84,17 +83,17 @@ window.location.replace("./1.php")        }
             <div class="ActivityDetailsUp">
 
                 <div class="UpPic"><img src=
-"pic/1.png"                      id="activity_pic"></div>
+"pic/1.png"                     id="activity_pic"></div>
                 <div class="UpText">
                     <div>活动名称：
-数学文化节                </div>
+数学文化节 </div>
                     <div>活动时间：
-2020年2月7日                    </div>
+2020年2月7日 </div>
                     <div>活动主办方：<a href="activity_host.html">
-数院学生会                    </a></div>
+数院学生会   </a></div>
                     <div>官方网页链接：<a href=
-"https://mp.weixin.qq.com/s/vkojb5lwadxQ9hwqwUXSJg"                        >
-https://mp.weixin.qq.com/s/vkojb5lwadxQ9hwqwUXSJg                    </a>
+"https://mp.weixin.qq.com/s/vkojb5lwadxQ9hwqwUXSJg"            >
+https://mp.weixin.qq.com/s/vkojb5lwadxQ9hwqwUXSJg        </a>
                     </div>
                     <div>综合评分:10.0&nbsp;&nbsp;趣味:10.0&nbsp;&nbsp;意义:10.0&nbsp;&nbsp;秩序:10.0</div>
 
@@ -125,6 +124,7 @@ https://mp.weixin.qq.com/s/vkojb5lwadxQ9hwqwUXSJg                    </a>
 
                 <br>
 
+
 百讲文化展示来了
 亲爱的各位同学：
 本周末我邀请了数学王国的大魔术师来到百讲，带来王国最新的魔术表演。数学王国的居民们也设计了许多趣味（直男）游戏供勇士们体验。
@@ -143,8 +143,6 @@ https://mp.weixin.qq.com/s/vkojb5lwadxQ9hwqwUXSJg                    </a>
 奖品有限，先到先得～
 10月20日百讲，不见不散~
 我，识数鸡在等着你们哦~
-
-
             </div>
             <br><br>
         </div>

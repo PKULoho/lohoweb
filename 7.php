@@ -4,17 +4,27 @@
 <head>
     <meta charset="utf-8">
     <title>
-信管趣味篮球赛    </title>
+信管趣味篮球赛</title>
     <link rel="icon" type="image/png" href="ico/logo.png"/>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+    <script src="activity_details.js"></script>
+
+    <script>
+        function replaceDoc() {
+window.location.replace("./7.php")    </script>
+
     <link rel="stylesheet" href="global_navigation.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="activity_list.css">
     <link rel="stylesheet" href="activity_details.css">
 
-    <script>
-        function replaceDoc() {
-window.location.replace("./7.php")        }
-    </script>
+    <style>
+        .global-nav .search-bar input{
+            height:32px;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,13 +48,15 @@ window.location.replace("./7.php")        }
         if (isset($_COOKIE['username'])) {
             echo '
             <div class="nav-item right-nav-item">
-    <a href="user_center_userinfo.php">个人中心</a>
-    </div>
-    <div class="nav-item right-nav-item">
-        <b>' . $_COOKIE['usernickname'] . '</b>
-        <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
-    </div>
-    ';
+                <a href="user_center_userinfo.php">个人中心</a>
+            </div>
+            <div class="nav-item right-nav-item">
+                <b>' . $_COOKIE['usernickname'] . '</b>
+                <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
+            </div>
+            <div class="nav-item right-nav-item" id="reminder">
+                <a>提醒</a><div class="reminder-list"><ul><li>>&nbsp;&nbsp;您报名的“北大剧星风采大赛初赛”将于今天举行</li><li>>“数学文化节”的时间更改为2020年4月2日</li></ul></div>
+            </div>';
     } else {
     echo '
     <div class="nav-item right-nav-item">
@@ -71,19 +83,19 @@ window.location.replace("./7.php")        }
             <div class="ActivityDetailsUp">
 
                 <div class="UpPic"><img src=
-"pic/7.png"                      id="activity_pic"></div>
+"pic/7.png"                     id="activity_pic"></div>
                 <div class="UpText">
                     <div>活动名称：
-信管趣味篮球赛                </div>
+信管趣味篮球赛 </div>
                     <div>活动时间：
-2019年9月5日                    </div>
+2019年9月5日 </div>
                     <div>活动主办方：<a href="activity_host.html">
-信管学生会                    </a></div>
+信管学生会   </a></div>
                     <div>官方网页链接：<a href=
-"https://mp.weixin.qq.com/s/UjlwANwRuc3PqETujdqH3w"                        >
-https://mp.weixin.qq.com/s/UjlwANwRuc3PqETujdqH3w                    </a>
+"https://mp.weixin.qq.com/s/UjlwANwRuc3PqETujdqH3w"            >
+https://mp.weixin.qq.com/s/UjlwANwRuc3PqETujdqH3w        </a>
                     </div>
-                    <div>评分：10.0</div>
+                    <div>综合评分:10.0&nbsp;&nbsp;趣味:10.0&nbsp;&nbsp;意义:10.0&nbsp;&nbsp;秩序:10.0</div>
 
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_wishlist.png"
                                                                                      class="icon">加入心愿单
@@ -94,7 +106,7 @@ https://mp.weixin.qq.com/s/UjlwANwRuc3PqETujdqH3w                    </a>
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_apply.png"
                                                                                      class="icon">立即报名
                     </button>
-                    <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_rate.png"
+                    <button class="button" type="submit"><img src="ico/icon_rate.png"
                                                                                      class="icon">评分
                     </button>
                 </div>
@@ -112,6 +124,7 @@ https://mp.weixin.qq.com/s/UjlwANwRuc3PqETujdqH3w                    </a>
 
                 <br>
 
+
 信息管理系师生，以一男一女二人组队形式报名参赛；当然亦可以单独报名，体育部将会为你随（强）机（制）匹（分）配（配）队友，保证你可以进行愉快的比赛！
 项目介绍
 *项目可能根据报名情况进行调整
@@ -126,8 +139,6 @@ https://mp.weixin.qq.com/s/UjlwANwRuc3PqETujdqH3w                    </a>
 每次进攻，进攻方发球人从后场三分线内发球，接球者在后场接球。进攻限时15秒，两名进攻队员互相配合，只有一次投篮机会，时间超过、投篮未进、球被截下或犯规则进攻结束。若进球得分，男生三分线内记1分，三分线外记2分，女生得分翻倍。
 每队四次进攻机会，防守方规定两人必须各守两次，上场次序自定。防守队员若犯规则罚分，对女生犯规进攻方得2分，对男生犯规进攻方得1分。
 比赛采用淘汰赛形式，两两对决，决出冠亚军，其余战绩相同的队伍按净胜分排序，净胜分再相同则按得分多少排序。
-
-
             </div>
             <br><br>
         </div>

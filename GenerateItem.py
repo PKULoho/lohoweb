@@ -1,7 +1,7 @@
 import xlrd
 
 lines = []
-f = open("activity_details.php", 'r')  # your path!
+f = open("TEMPLATE.php", 'r')  # your path!
 for line in f:
     lines.append(line)
 
@@ -21,13 +21,13 @@ for i in range(1, 61, 1):
 
     lines[6] = name
     lines[16]='window.location.replace("./'+str(i)+'.php")'
-    lines[75] = '"pic/' + str(i) + '.png"'
-    lines[79] = name
-    lines[82] = time
-    lines[85] = host
-    lines[88] = '"' + link + '"'
-    lines[90] = link
-    lines[122] = intro
+    lines[87] = '"pic/' + str(i) + '.png"'
+    lines[91] = name
+    lines[94] = time
+    lines[97] = host
+    lines[100] = '"' + link + '"'
+    lines[102] = link
+    lines[135] = intro
     s = ''.join(lines)
 
     with open(str(i) + ".php", "w") as f:

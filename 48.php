@@ -4,17 +4,27 @@
 <head>
     <meta charset="utf-8">
     <title>
-Baruch+CMU MSCF学长约你线下解读2019美国金融工程申请白皮书    </title>
+Baruch+CMU MSCF学长约你线下解读2019美国金融工程申请白皮书</title>
     <link rel="icon" type="image/png" href="ico/logo.png"/>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+    <script src="activity_details.js"></script>
+
+    <script>
+        function replaceDoc() {
+window.location.replace("./48.php")    </script>
+
     <link rel="stylesheet" href="global_navigation.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="activity_list.css">
     <link rel="stylesheet" href="activity_details.css">
 
-    <script>
-        function replaceDoc() {
-window.location.replace("./48.php")        }
-    </script>
+    <style>
+        .global-nav .search-bar input{
+            height:32px;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,13 +48,15 @@ window.location.replace("./48.php")        }
         if (isset($_COOKIE['username'])) {
             echo '
             <div class="nav-item right-nav-item">
-    <a href="user_center_userinfo.php">个人中心</a>
-    </div>
-    <div class="nav-item right-nav-item">
-        <b>' . $_COOKIE['usernickname'] . '</b>
-        <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
-    </div>
-    ';
+                <a href="user_center_userinfo.php">个人中心</a>
+            </div>
+            <div class="nav-item right-nav-item">
+                <b>' . $_COOKIE['usernickname'] . '</b>
+                <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
+            </div>
+            <div class="nav-item right-nav-item" id="reminder">
+                <a>提醒</a><div class="reminder-list"><ul><li>>&nbsp;&nbsp;您报名的“北大剧星风采大赛初赛”将于今天举行</li><li>>“数学文化节”的时间更改为2020年4月2日</li></ul></div>
+            </div>';
     } else {
     echo '
     <div class="nav-item right-nav-item">
@@ -71,19 +83,19 @@ window.location.replace("./48.php")        }
             <div class="ActivityDetailsUp">
 
                 <div class="UpPic"><img src=
-"pic/48.png"                      id="activity_pic"></div>
+"pic/48.png"                     id="activity_pic"></div>
                 <div class="UpText">
                     <div>活动名称：
-Baruch+CMU MSCF学长约你线下解读2019美国金融工程申请白皮书                </div>
+Baruch+CMU MSCF学长约你线下解读2019美国金融工程申请白皮书 </div>
                     <div>活动时间：
-2020年1月2日                    </div>
+2020年1月2日 </div>
                     <div>活动主办方：<a href="activity_host.html">
-数院学生会                    </a></div>
+数院学生会   </a></div>
                     <div>官方网页链接：<a href=
-"https://mp.weixin.qq.com/s/_r51cWLNC2NCiEZNzFvtyg"                        >
-https://mp.weixin.qq.com/s/_r51cWLNC2NCiEZNzFvtyg                    </a>
+"https://mp.weixin.qq.com/s/_r51cWLNC2NCiEZNzFvtyg"            >
+https://mp.weixin.qq.com/s/_r51cWLNC2NCiEZNzFvtyg        </a>
                     </div>
-                    <div>评分：10.0</div>
+                    <div>综合评分:10.0&nbsp;&nbsp;趣味:10.0&nbsp;&nbsp;意义:10.0&nbsp;&nbsp;秩序:10.0</div>
 
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_wishlist.png"
                                                                                      class="icon">加入心愿单
@@ -94,7 +106,7 @@ https://mp.weixin.qq.com/s/_r51cWLNC2NCiEZNzFvtyg                    </a>
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_apply.png"
                                                                                      class="icon">立即报名
                     </button>
-                    <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_rate.png"
+                    <button class="button" type="submit"><img src="ico/icon_rate.png"
                                                                                      class="icon">评分
                     </button>
                 </div>
@@ -111,6 +123,7 @@ https://mp.weixin.qq.com/s/_r51cWLNC2NCiEZNzFvtyg                    </a>
                 </div>
 
                 <br>
+
 
 
 金融、金融工程作为硕士
@@ -164,8 +177,6 @@ CMU MSCF毕业生，现在美国华尔街某TOP投资银行工作，对金融金
 （金融工程Tier1六场，商业分析三场连讲，MPP/MPA，北美求职指导等......)
 3.2019年9月世毕盟首席咨询师亲授申请培训课
 4.另有各类实习信息资料汇总，并有机会获得世毕盟内推机会
-
-
             </div>
             <br><br>
         </div>

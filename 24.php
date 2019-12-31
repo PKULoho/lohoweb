@@ -4,17 +4,27 @@
 <head>
     <meta charset="utf-8">
     <title>
-“流浪井盖” 炫酷印染    </title>
+“流浪井盖” 炫酷印染</title>
     <link rel="icon" type="image/png" href="ico/logo.png"/>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+    <script src="activity_details.js"></script>
+
+    <script>
+        function replaceDoc() {
+window.location.replace("./24.php")    </script>
+
     <link rel="stylesheet" href="global_navigation.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="activity_list.css">
     <link rel="stylesheet" href="activity_details.css">
 
-    <script>
-        function replaceDoc() {
-window.location.replace("./24.php")        }
-    </script>
+    <style>
+        .global-nav .search-bar input{
+            height:32px;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,13 +48,15 @@ window.location.replace("./24.php")        }
         if (isset($_COOKIE['username'])) {
             echo '
             <div class="nav-item right-nav-item">
-    <a href="user_center_userinfo.php">个人中心</a>
-    </div>
-    <div class="nav-item right-nav-item">
-        <b>' . $_COOKIE['usernickname'] . '</b>
-        <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
-    </div>
-    ';
+                <a href="user_center_userinfo.php">个人中心</a>
+            </div>
+            <div class="nav-item right-nav-item">
+                <b>' . $_COOKIE['usernickname'] . '</b>
+                <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
+            </div>
+            <div class="nav-item right-nav-item" id="reminder">
+                <a>提醒</a><div class="reminder-list"><ul><li>>&nbsp;&nbsp;您报名的“北大剧星风采大赛初赛”将于今天举行</li><li>>“数学文化节”的时间更改为2020年4月2日</li></ul></div>
+            </div>';
     } else {
     echo '
     <div class="nav-item right-nav-item">
@@ -71,19 +83,19 @@ window.location.replace("./24.php")        }
             <div class="ActivityDetailsUp">
 
                 <div class="UpPic"><img src=
-"pic/24.png"                      id="activity_pic"></div>
+"pic/24.png"                     id="activity_pic"></div>
                 <div class="UpText">
                     <div>活动名称：
-“流浪井盖” 炫酷印染                </div>
+“流浪井盖” 炫酷印染 </div>
                     <div>活动时间：
-2019年6月21日                    </div>
+2019年6月21日 </div>
                     <div>活动主办方：<a href="activity_host.html">
-北京大学极客实验室                    </a></div>
+北京大学极客实验室   </a></div>
                     <div>官方网页链接：<a href=
-"https://mp.weixin.qq.com/s/88ABdT3KTjJ54WzKMafpTQ"                        >
-https://mp.weixin.qq.com/s/88ABdT3KTjJ54WzKMafpTQ                    </a>
+"https://mp.weixin.qq.com/s/88ABdT3KTjJ54WzKMafpTQ"            >
+https://mp.weixin.qq.com/s/88ABdT3KTjJ54WzKMafpTQ        </a>
                     </div>
-                    <div>评分：10.0</div>
+                    <div>综合评分:10.0&nbsp;&nbsp;趣味:10.0&nbsp;&nbsp;意义:10.0&nbsp;&nbsp;秩序:10.0</div>
 
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_wishlist.png"
                                                                                      class="icon">加入心愿单
@@ -94,7 +106,7 @@ https://mp.weixin.qq.com/s/88ABdT3KTjJ54WzKMafpTQ                    </a>
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_apply.png"
                                                                                      class="icon">立即报名
                     </button>
-                    <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_rate.png"
+                    <button class="button" type="submit"><img src="ico/icon_rate.png"
                                                                                      class="icon">评分
                     </button>
                 </div>
@@ -112,6 +124,7 @@ https://mp.weixin.qq.com/s/88ABdT3KTjJ54WzKMafpTQ                    </a>
 
                 <br>
 
+
 流浪井盖计划共分为四个阶段 
     第一阶段：转换阶段，运用光影成像技术将井盖纹样转换成电子信号
     第二阶段：转移阶段，利用激光切割技术在木板上重塑井盖纹样，完成井盖纹样的转移
@@ -120,8 +133,6 @@ https://mp.weixin.qq.com/s/88ABdT3KTjJ54WzKMafpTQ                    </a>
     我们已经帮助井盖完成了第一第二阶段，将井盖纹样刻印到了木板上，大家可以在面前的模具中看到
     我们本次活动就要完成第三第四阶段，将井盖图案印到T恤/布袋上，帮助它完成逃离。 
     但衣服上只有井盖的“燕”字图案似乎有些太过单调，于是我们结合极客实验室自身的魔幻特点和最近很火的《流浪地球》，另外为大家制作了一些带有科幻色彩的图案。大家可以自由选择并组合图案，印制出自己独特的T恤/布袋。
-
-
             </div>
             <br><br>
         </div>

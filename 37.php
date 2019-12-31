@@ -4,17 +4,27 @@
 <head>
     <meta charset="utf-8">
     <title>
-中国机长    </title>
+中国机长</title>
     <link rel="icon" type="image/png" href="ico/logo.png"/>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+    <script src="activity_details.js"></script>
+
+    <script>
+        function replaceDoc() {
+window.location.replace("./37.php")    </script>
+
     <link rel="stylesheet" href="global_navigation.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="activity_list.css">
     <link rel="stylesheet" href="activity_details.css">
 
-    <script>
-        function replaceDoc() {
-window.location.replace("./37.php")        }
-    </script>
+    <style>
+        .global-nav .search-bar input{
+            height:32px;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,13 +48,15 @@ window.location.replace("./37.php")        }
         if (isset($_COOKIE['username'])) {
             echo '
             <div class="nav-item right-nav-item">
-    <a href="user_center_userinfo.php">个人中心</a>
-    </div>
-    <div class="nav-item right-nav-item">
-        <b>' . $_COOKIE['usernickname'] . '</b>
-        <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
-    </div>
-    ';
+                <a href="user_center_userinfo.php">个人中心</a>
+            </div>
+            <div class="nav-item right-nav-item">
+                <b>' . $_COOKIE['usernickname'] . '</b>
+                <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
+            </div>
+            <div class="nav-item right-nav-item" id="reminder">
+                <a>提醒</a><div class="reminder-list"><ul><li>>&nbsp;&nbsp;您报名的“北大剧星风采大赛初赛”将于今天举行</li><li>>“数学文化节”的时间更改为2020年4月2日</li></ul></div>
+            </div>';
     } else {
     echo '
     <div class="nav-item right-nav-item">
@@ -71,19 +83,19 @@ window.location.replace("./37.php")        }
             <div class="ActivityDetailsUp">
 
                 <div class="UpPic"><img src=
-"pic/37.png"                      id="activity_pic"></div>
+"pic/37.png"                     id="activity_pic"></div>
                 <div class="UpText">
                     <div>活动名称：
-中国机长                </div>
+中国机长 </div>
                     <div>活动时间：
-2020年4月11日                    </div>
+2020年4月11日 </div>
                     <div>活动主办方：<a href="activity_host.html">
-北大百讲                    </a></div>
+北大百讲   </a></div>
                     <div>官方网页链接：<a href=
-"http://www.pku-hall.com/qbhd-nr.aspx?id=3103"                        >
-http://www.pku-hall.com/qbhd-nr.aspx?id=3103                    </a>
+"http://www.pku-hall.com/qbhd-nr.aspx?id=3103"            >
+http://www.pku-hall.com/qbhd-nr.aspx?id=3103        </a>
                     </div>
-                    <div>评分：10.0</div>
+                    <div>综合评分:10.0&nbsp;&nbsp;趣味:10.0&nbsp;&nbsp;意义:10.0&nbsp;&nbsp;秩序:10.0</div>
 
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_wishlist.png"
                                                                                      class="icon">加入心愿单
@@ -94,7 +106,7 @@ http://www.pku-hall.com/qbhd-nr.aspx?id=3103                    </a>
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_apply.png"
                                                                                      class="icon">立即报名
                     </button>
-                    <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_rate.png"
+                    <button class="button" type="submit"><img src="ico/icon_rate.png"
                                                                                      class="icon">评分
                     </button>
                 </div>
@@ -112,11 +124,10 @@ http://www.pku-hall.com/qbhd-nr.aspx?id=3103                    </a>
 
                 <br>
 
+
 电影《中国机长》根据2018年5月14日四川航空3U8633航班机组成功处置特情这一真实事件改编：机组执行航班任务时，在万米高空突遇驾驶舱风挡玻璃爆裂脱落、座舱释压的极端罕见险情，生死关头，他们临危不乱、果断应对、正确处置，确保了机上全部人员的生命安全，创造了世界民航史上的奇迹。
 　　四川航空3U8633航班遭遇极端险情后，无法与空管部门建立有效联系，空管部门因而向彼时正在空中执飞的机长们发出指令，请求帮忙呼叫3U8633。危急时刻，诸多在空中执行飞行任务的机长向3U8633 航班发出呼叫：“四川8633，成都在叫你。”这句重复的话语虽然简短，但承载着所有人对128名机组人员及乘客的牵挂和祈祷，也令人仿佛置身事发现场，与他们同呼吸、共命运。
 　　千钧一发之际，地面相关部门也进入紧急待命状态，西南空管局各部门努力尝试与3U8633恢复联系，成都机场各地面部门纷纷出动，为3U8633的备降做好万全准备，而西部战区空军、民航西南空管局等单位竭尽全力为3U8633“净化”空域、腾出跑道……各部门的种种努力，让人感受到了事件背后凝聚的中国力量，也无疑彰显了中国人万众一心的团结精神。
-
-
             </div>
             <br><br>
         </div>

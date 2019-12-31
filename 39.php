@@ -4,17 +4,27 @@
 <head>
     <meta charset="utf-8">
     <title>
-2020新年相声喜乐会    </title>
+2020新年相声喜乐会</title>
     <link rel="icon" type="image/png" href="ico/logo.png"/>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+    <script src="activity_details.js"></script>
+
+    <script>
+        function replaceDoc() {
+window.location.replace("./39.php")    </script>
+
     <link rel="stylesheet" href="global_navigation.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="activity_list.css">
     <link rel="stylesheet" href="activity_details.css">
 
-    <script>
-        function replaceDoc() {
-window.location.replace("./39.php")        }
-    </script>
+    <style>
+        .global-nav .search-bar input{
+            height:32px;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,13 +48,15 @@ window.location.replace("./39.php")        }
         if (isset($_COOKIE['username'])) {
             echo '
             <div class="nav-item right-nav-item">
-    <a href="user_center_userinfo.php">个人中心</a>
-    </div>
-    <div class="nav-item right-nav-item">
-        <b>' . $_COOKIE['usernickname'] . '</b>
-        <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
-    </div>
-    ';
+                <a href="user_center_userinfo.php">个人中心</a>
+            </div>
+            <div class="nav-item right-nav-item">
+                <b>' . $_COOKIE['usernickname'] . '</b>
+                <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
+            </div>
+            <div class="nav-item right-nav-item" id="reminder">
+                <a>提醒</a><div class="reminder-list"><ul><li>>&nbsp;&nbsp;您报名的“北大剧星风采大赛初赛”将于今天举行</li><li>>“数学文化节”的时间更改为2020年4月2日</li></ul></div>
+            </div>';
     } else {
     echo '
     <div class="nav-item right-nav-item">
@@ -71,19 +83,19 @@ window.location.replace("./39.php")        }
             <div class="ActivityDetailsUp">
 
                 <div class="UpPic"><img src=
-"pic/39.png"                      id="activity_pic"></div>
+"pic/39.png"                     id="activity_pic"></div>
                 <div class="UpText">
                     <div>活动名称：
-2020新年相声喜乐会                </div>
+2020新年相声喜乐会 </div>
                     <div>活动时间：
-2020年3月5日                    </div>
+2020年3月5日 </div>
                     <div>活动主办方：<a href="activity_host.html">
-北京大学会议中心                    </a></div>
+北京大学会议中心   </a></div>
                     <div>官方网页链接：<a href=
-"http://www.pku-hall.com/qbhd-nr.aspx?id=3010"                        >
-http://www.pku-hall.com/qbhd-nr.aspx?id=3010                    </a>
+"http://www.pku-hall.com/qbhd-nr.aspx?id=3010"            >
+http://www.pku-hall.com/qbhd-nr.aspx?id=3010        </a>
                     </div>
-                    <div>评分：10.0</div>
+                    <div>综合评分:10.0&nbsp;&nbsp;趣味:10.0&nbsp;&nbsp;意义:10.0&nbsp;&nbsp;秩序:10.0</div>
 
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_wishlist.png"
                                                                                      class="icon">加入心愿单
@@ -94,7 +106,7 @@ http://www.pku-hall.com/qbhd-nr.aspx?id=3010                    </a>
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_apply.png"
                                                                                      class="icon">立即报名
                     </button>
-                    <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_rate.png"
+                    <button class="button" type="submit"><img src="ico/icon_rate.png"
                                                                                      class="icon">评分
                     </button>
                 </div>
@@ -111,6 +123,7 @@ http://www.pku-hall.com/qbhd-nr.aspx?id=3010                    </a>
                 </div>
 
                 <br>
+
 
 说学逗唱，感受相声魅力
 妙语雅谑，体味人生百态
@@ -139,8 +152,6 @@ http://www.pku-hall.com/qbhd-nr.aspx?id=3010                    </a>
 　　单口相声演员，李金斗弟子。2010年凭借单口相声《幸福童年》在中央电视台第五届全国相声大赛中获得二等奖。其表演既不同于偏重叙述故事的传统单口相声，也区别于夸张说唱的新派脱口秀，而是在看似表情木然的絮叨和自嘲中，令人捧腹大笑、拍案称绝。
 付强
 　　青年相声演员，李金斗弟子。1999年获得全国曲艺调演相声金奖，2005年获得北京电视台全国相声大赛最佳逗哏奖，2008年获得中央电视台第四届全国相声大赛最佳逗哏奖。
-
-
 
             </div>
             <br><br>

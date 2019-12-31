@@ -4,17 +4,27 @@
 <head>
     <meta charset="utf-8">
     <title>
-校庆晚会    </title>
+校庆晚会</title>
     <link rel="icon" type="image/png" href="ico/logo.png"/>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+    <script src="activity_details.js"></script>
+
+    <script>
+        function replaceDoc() {
+window.location.replace("./43.php")    </script>
+
     <link rel="stylesheet" href="global_navigation.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="activity_list.css">
     <link rel="stylesheet" href="activity_details.css">
 
-    <script>
-        function replaceDoc() {
-window.location.replace("./43.php")        }
-    </script>
+    <style>
+        .global-nav .search-bar input{
+            height:32px;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,13 +48,15 @@ window.location.replace("./43.php")        }
         if (isset($_COOKIE['username'])) {
             echo '
             <div class="nav-item right-nav-item">
-    <a href="user_center_userinfo.php">个人中心</a>
-    </div>
-    <div class="nav-item right-nav-item">
-        <b>' . $_COOKIE['usernickname'] . '</b>
-        <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
-    </div>
-    ';
+                <a href="user_center_userinfo.php">个人中心</a>
+            </div>
+            <div class="nav-item right-nav-item">
+                <b>' . $_COOKIE['usernickname'] . '</b>
+                <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
+            </div>
+            <div class="nav-item right-nav-item" id="reminder">
+                <a>提醒</a><div class="reminder-list"><ul><li>>&nbsp;&nbsp;您报名的“北大剧星风采大赛初赛”将于今天举行</li><li>>“数学文化节”的时间更改为2020年4月2日</li></ul></div>
+            </div>';
     } else {
     echo '
     <div class="nav-item right-nav-item">
@@ -71,19 +83,19 @@ window.location.replace("./43.php")        }
             <div class="ActivityDetailsUp">
 
                 <div class="UpPic"><img src=
-"pic/43.png"                      id="activity_pic"></div>
+"pic/43.png"                     id="activity_pic"></div>
                 <div class="UpText">
                     <div>活动名称：
-校庆晚会                </div>
+校庆晚会 </div>
                     <div>活动时间：
-2020年2月27日                    </div>
+2020年2月27日 </div>
                     <div>活动主办方：<a href="activity_host.html">
-共青团北京大学委员会                    </a></div>
+共青团北京大学委员会   </a></div>
                     <div>官方网页链接：<a href=
-"https://mp.weixin.qq.com/s/cIudbj5ZjYSkI6t_0c2t8w"                        >
-https://mp.weixin.qq.com/s/cIudbj5ZjYSkI6t_0c2t8w                    </a>
+"https://mp.weixin.qq.com/s/cIudbj5ZjYSkI6t_0c2t8w"            >
+https://mp.weixin.qq.com/s/cIudbj5ZjYSkI6t_0c2t8w        </a>
                     </div>
-                    <div>评分：10.0</div>
+                    <div>综合评分:10.0&nbsp;&nbsp;趣味:10.0&nbsp;&nbsp;意义:10.0&nbsp;&nbsp;秩序:10.0</div>
 
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_wishlist.png"
                                                                                      class="icon">加入心愿单
@@ -94,7 +106,7 @@ https://mp.weixin.qq.com/s/cIudbj5ZjYSkI6t_0c2t8w                    </a>
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_apply.png"
                                                                                      class="icon">立即报名
                     </button>
-                    <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_rate.png"
+                    <button class="button" type="submit"><img src="ico/icon_rate.png"
                                                                                      class="icon">评分
                     </button>
                 </div>
@@ -111,6 +123,7 @@ https://mp.weixin.qq.com/s/cIudbj5ZjYSkI6t_0c2t8w                    </a>
                 </div>
 
                 <br>
+
 
 鲁迅先生说，“北大是常为新的，改进的运动的先锋，要使中国向着好的，往上的道路走”。
  
@@ -135,8 +148,6 @@ https://mp.weixin.qq.com/s/cIudbj5ZjYSkI6t_0c2t8w                    </a>
 注意事项
 1. 请现场观众于19:30前从讲堂南门入场，请勿带包。严禁携带食品及有色含糖饮料入场，禁止使用闪光灯拍照。
 2. 关注微信公众号“北京大学120周年校庆”，晚会当天在后台回复“庆祝晚会”即可获取电子节目单。
-
-
             </div>
             <br><br>
         </div>

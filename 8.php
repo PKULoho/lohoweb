@@ -4,17 +4,27 @@
 <head>
     <meta charset="utf-8">
     <title>
-终身大事——五四知识人的婚姻生活    </title>
+终身大事——五四知识人的婚姻生活</title>
     <link rel="icon" type="image/png" href="ico/logo.png"/>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+    <script src="activity_details.js"></script>
+
+    <script>
+        function replaceDoc() {
+window.location.replace("./8.php")    </script>
+
     <link rel="stylesheet" href="global_navigation.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="activity_list.css">
     <link rel="stylesheet" href="activity_details.css">
 
-    <script>
-        function replaceDoc() {
-window.location.replace("./8.php")        }
-    </script>
+    <style>
+        .global-nav .search-bar input{
+            height:32px;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,13 +48,15 @@ window.location.replace("./8.php")        }
         if (isset($_COOKIE['username'])) {
             echo '
             <div class="nav-item right-nav-item">
-    <a href="user_center_userinfo.php">个人中心</a>
-    </div>
-    <div class="nav-item right-nav-item">
-        <b>' . $_COOKIE['usernickname'] . '</b>
-        <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
-    </div>
-    ';
+                <a href="user_center_userinfo.php">个人中心</a>
+            </div>
+            <div class="nav-item right-nav-item">
+                <b>' . $_COOKIE['usernickname'] . '</b>
+                <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
+            </div>
+            <div class="nav-item right-nav-item" id="reminder">
+                <a>提醒</a><div class="reminder-list"><ul><li>>&nbsp;&nbsp;您报名的“北大剧星风采大赛初赛”将于今天举行</li><li>>“数学文化节”的时间更改为2020年4月2日</li></ul></div>
+            </div>';
     } else {
     echo '
     <div class="nav-item right-nav-item">
@@ -71,19 +83,19 @@ window.location.replace("./8.php")        }
             <div class="ActivityDetailsUp">
 
                 <div class="UpPic"><img src=
-"pic/8.png"                      id="activity_pic"></div>
+"pic/8.png"                     id="activity_pic"></div>
                 <div class="UpText">
                     <div>活动名称：
-终身大事——五四知识人的婚姻生活                </div>
+终身大事——五四知识人的婚姻生活 </div>
                     <div>活动时间：
-2019年8月6日                    </div>
+2019年8月6日 </div>
                     <div>活动主办方：<a href="activity_host.html">
-信管学生会                    </a></div>
+信管学生会   </a></div>
                     <div>官方网页链接：<a href=
-"https://mp.weixin.qq.com/s/i1PjGm6OVdK7fSXKxTzHow"                        >
-https://mp.weixin.qq.com/s/i1PjGm6OVdK7fSXKxTzHow                    </a>
+"https://mp.weixin.qq.com/s/i1PjGm6OVdK7fSXKxTzHow"            >
+https://mp.weixin.qq.com/s/i1PjGm6OVdK7fSXKxTzHow        </a>
                     </div>
-                    <div>评分：10.0</div>
+                    <div>综合评分:10.0&nbsp;&nbsp;趣味:10.0&nbsp;&nbsp;意义:10.0&nbsp;&nbsp;秩序:10.0</div>
 
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_wishlist.png"
                                                                                      class="icon">加入心愿单
@@ -94,7 +106,7 @@ https://mp.weixin.qq.com/s/i1PjGm6OVdK7fSXKxTzHow                    </a>
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_apply.png"
                                                                                      class="icon">立即报名
                     </button>
-                    <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_rate.png"
+                    <button class="button" type="submit"><img src="ico/icon_rate.png"
                                                                                      class="icon">评分
                     </button>
                 </div>
@@ -112,11 +124,10 @@ https://mp.weixin.qq.com/s/i1PjGm6OVdK7fSXKxTzHow                    </a>
 
                 <br>
 
+
 一百年前，“思想自由，兼容并包”的北京大学成为五四运动的发源地，用新思想的浪潮引领着时代的进步青年。一百年后，“爱国、进步、民主、科学”的五四精神依然在北大熠熠生辉，胡适、傅斯年等人的事迹鼓舞着一代又一代的青年学子。
 　　然而，在耀眼的光环下，这些大人物也需要面对自己的婚姻大事。在追求自由恋爱的理想婚姻与讲究父母之命的传统婚姻之间，他们如何抉择，付出了什么代价？当个人情感与时代理性交织，个人生命史与社会历史运动重叠，婚姻记忆反映的，又是怎样的社会和文化习俗变迁？
 　　大人物，小故事，4月18日，听潘光哲先生讲述五四知识人对婚姻之事的期待与抉择，品时代巨匠不一样的“儿女情长”，从婚姻视角看文化习俗的转变，用个体生命的眼光体悟时代剧变！
-
-
             </div>
             <br><br>
         </div>

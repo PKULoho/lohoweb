@@ -4,17 +4,27 @@
 <head>
     <meta charset="utf-8">
     <title>
-“文明北大——自行车齐停计划”志愿者招募    </title>
+“文明北大——自行车齐停计划”志愿者招募</title>
     <link rel="icon" type="image/png" href="ico/logo.png"/>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+    <script src="activity_details.js"></script>
+
+    <script>
+        function replaceDoc() {
+window.location.replace("./46.php")    </script>
+
     <link rel="stylesheet" href="global_navigation.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="activity_list.css">
     <link rel="stylesheet" href="activity_details.css">
 
-    <script>
-        function replaceDoc() {
-window.location.replace("./46.php")        }
-    </script>
+    <style>
+        .global-nav .search-bar input{
+            height:32px;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,13 +48,15 @@ window.location.replace("./46.php")        }
         if (isset($_COOKIE['username'])) {
             echo '
             <div class="nav-item right-nav-item">
-    <a href="user_center_userinfo.php">个人中心</a>
-    </div>
-    <div class="nav-item right-nav-item">
-        <b>' . $_COOKIE['usernickname'] . '</b>
-        <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
-    </div>
-    ';
+                <a href="user_center_userinfo.php">个人中心</a>
+            </div>
+            <div class="nav-item right-nav-item">
+                <b>' . $_COOKIE['usernickname'] . '</b>
+                <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
+            </div>
+            <div class="nav-item right-nav-item" id="reminder">
+                <a>提醒</a><div class="reminder-list"><ul><li>>&nbsp;&nbsp;您报名的“北大剧星风采大赛初赛”将于今天举行</li><li>>“数学文化节”的时间更改为2020年4月2日</li></ul></div>
+            </div>';
     } else {
     echo '
     <div class="nav-item right-nav-item">
@@ -71,19 +83,19 @@ window.location.replace("./46.php")        }
             <div class="ActivityDetailsUp">
 
                 <div class="UpPic"><img src=
-"pic/46.png"                      id="activity_pic"></div>
+"pic/46.png"                     id="activity_pic"></div>
                 <div class="UpText">
                     <div>活动名称：
-“文明北大——自行车齐停计划”志愿者招募                </div>
+“文明北大——自行车齐停计划”志愿者招募 </div>
                     <div>活动时间：
-2020年1月9日                    </div>
+2020年1月9日 </div>
                     <div>活动主办方：<a href="activity_host.html">
-外院学生会                    </a></div>
+外院学生会   </a></div>
                     <div>官方网页链接：<a href=
-"https://mp.weixin.qq.com/s/Da53jDs82xnTB3FX1GiQkw"                        >
-https://mp.weixin.qq.com/s/Da53jDs82xnTB3FX1GiQkw                    </a>
+"https://mp.weixin.qq.com/s/Da53jDs82xnTB3FX1GiQkw"            >
+https://mp.weixin.qq.com/s/Da53jDs82xnTB3FX1GiQkw        </a>
                     </div>
-                    <div>评分：10.0</div>
+                    <div>综合评分:10.0&nbsp;&nbsp;趣味:10.0&nbsp;&nbsp;意义:10.0&nbsp;&nbsp;秩序:10.0</div>
 
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_wishlist.png"
                                                                                      class="icon">加入心愿单
@@ -94,7 +106,7 @@ https://mp.weixin.qq.com/s/Da53jDs82xnTB3FX1GiQkw                    </a>
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_apply.png"
                                                                                      class="icon">立即报名
                     </button>
-                    <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_rate.png"
+                    <button class="button" type="submit"><img src="ico/icon_rate.png"
                                                                                      class="icon">评分
                     </button>
                 </div>
@@ -112,6 +124,7 @@ https://mp.weixin.qq.com/s/Da53jDs82xnTB3FX1GiQkw                    </a>
 
                 <br>
 
+
 眼底未名水，胸中黄河月。北大为我们创造了良好的学习氛围，我们治学于斯，成长于此。但同时，校园自行车乱停乱放现象时有发生，严重影响校园环境。我们在调查中发现，自行车无序停放影响校园整洁、违规停放妨碍道路通畅、倾倒车辆无人扶起、废弃车辆抢占车位资源等情况给同学们带来了诸多不便。
 为了建立文明整洁的校园形象，北京大学学生会和北京大学研究生会根据校园自行车停放的现实情况，启动“文明北大——校园自行车齐停计划”，通过引导同学们遵守停车秩序、保持车场整洁，鼓励同学们不吝举手之劳、积极建言献策，共同改善校园自行车乱停乱放的现象，维护美好校园环境。
 我们将招募热爱北大的你、愿意为文明北大出一份力的你，和我们一同参与以下志愿服务：
@@ -127,8 +140,6 @@ https://mp.weixin.qq.com/s/Da53jDs82xnTB3FX1GiQkw                    </a>
 我们将来到各生活区域、教学区域进行服务，提醒同学们有序把自行车停到指定位置，引导大家履行停车倡议，共同维护整洁的校园环境。
 活动时段：10月23日~10月25日（星期三~星期五） 
 7:30~8:30；9:30~10:30；12:30~13:30；14:30~15:30；18:10~19:10
-
-
             </div>
             <br><br>
         </div>

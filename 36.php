@@ -4,17 +4,27 @@
 <head>
     <meta charset="utf-8">
     <title>
-2019·春风上巳天 昆曲经典折子戏专场    </title>
+2019·春风上巳天 昆曲经典折子戏专场</title>
     <link rel="icon" type="image/png" href="ico/logo.png"/>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+    <script src="activity_details.js"></script>
+
+    <script>
+        function replaceDoc() {
+window.location.replace("./36.php")    </script>
+
     <link rel="stylesheet" href="global_navigation.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="activity_list.css">
     <link rel="stylesheet" href="activity_details.css">
 
-    <script>
-        function replaceDoc() {
-window.location.replace("./36.php")        }
-    </script>
+    <style>
+        .global-nav .search-bar input{
+            height:32px;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,13 +48,15 @@ window.location.replace("./36.php")        }
         if (isset($_COOKIE['username'])) {
             echo '
             <div class="nav-item right-nav-item">
-    <a href="user_center_userinfo.php">个人中心</a>
-    </div>
-    <div class="nav-item right-nav-item">
-        <b>' . $_COOKIE['usernickname'] . '</b>
-        <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
-    </div>
-    ';
+                <a href="user_center_userinfo.php">个人中心</a>
+            </div>
+            <div class="nav-item right-nav-item">
+                <b>' . $_COOKIE['usernickname'] . '</b>
+                <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
+            </div>
+            <div class="nav-item right-nav-item" id="reminder">
+                <a>提醒</a><div class="reminder-list"><ul><li>>&nbsp;&nbsp;您报名的“北大剧星风采大赛初赛”将于今天举行</li><li>>“数学文化节”的时间更改为2020年4月2日</li></ul></div>
+            </div>';
     } else {
     echo '
     <div class="nav-item right-nav-item">
@@ -71,19 +83,19 @@ window.location.replace("./36.php")        }
             <div class="ActivityDetailsUp">
 
                 <div class="UpPic"><img src=
-"pic/36.png"                      id="activity_pic"></div>
+"pic/36.png"                     id="activity_pic"></div>
                 <div class="UpText">
                     <div>活动名称：
-2019·春风上巳天 昆曲经典折子戏专场                </div>
+2019·春风上巳天 昆曲经典折子戏专场 </div>
                     <div>活动时间：
-2020年3月2日                    </div>
+2020年3月2日 </div>
                     <div>活动主办方：<a href="activity_host.html">
-石小梅昆曲工作室                    </a></div>
+石小梅昆曲工作室   </a></div>
                     <div>官方网页链接：<a href=
-"http://www.pku-hall.com/qbhd-nr.aspx?id=3045"                        >
-http://www.pku-hall.com/qbhd-nr.aspx?id=3045                    </a>
+"http://www.pku-hall.com/qbhd-nr.aspx?id=3045"            >
+http://www.pku-hall.com/qbhd-nr.aspx?id=3045        </a>
                     </div>
-                    <div>评分：10.0</div>
+                    <div>综合评分:10.0&nbsp;&nbsp;趣味:10.0&nbsp;&nbsp;意义:10.0&nbsp;&nbsp;秩序:10.0</div>
 
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_wishlist.png"
                                                                                      class="icon">加入心愿单
@@ -94,7 +106,7 @@ http://www.pku-hall.com/qbhd-nr.aspx?id=3045                    </a>
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_apply.png"
                                                                                      class="icon">立即报名
                     </button>
-                    <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_rate.png"
+                    <button class="button" type="submit"><img src="ico/icon_rate.png"
                                                                                      class="icon">评分
                     </button>
                 </div>
@@ -111,6 +123,7 @@ http://www.pku-hall.com/qbhd-nr.aspx?id=3045                    </a>
                 </div>
 
                 <br>
+
 
 出　品：石小梅昆曲工作室 江苏省演艺集团昆剧院
 艺术总指导：石小梅
@@ -163,8 +176,6 @@ http://www.pku-hall.com/qbhd-nr.aspx?id=3045                    </a>
 　　江苏省演艺集团昆剧院国家二级演员，2004年毕业于江苏省戏剧学校昆剧科。工丑，师从李鸿良、计韶清、林继凡，2013年拜张寄蝶为师。
 　　代表剧目:《跃鲤记·芦林》《寻亲记·茶访》《虎囊弹·山门》《占花魁·湖楼》《牡丹亭·问路》《水浒记·活捉》《1699·桃花扇》等。
 　　主要荣誉：全国昆曲优秀青年演员展演表演奖、第八届江苏戏曲红梅奖银奖。
-
-
             </div>
             <br><br>
         </div>

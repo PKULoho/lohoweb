@@ -4,17 +4,27 @@
 <head>
     <meta charset="utf-8">
     <title>
-“空”降冬至，“政”在等你    </title>
+“空”降冬至，“政”在等你</title>
     <link rel="icon" type="image/png" href="ico/logo.png"/>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+    <script src="activity_details.js"></script>
+
+    <script>
+        function replaceDoc() {
+window.location.replace("./25.php")    </script>
+
     <link rel="stylesheet" href="global_navigation.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="activity_list.css">
     <link rel="stylesheet" href="activity_details.css">
 
-    <script>
-        function replaceDoc() {
-window.location.replace("./25.php")        }
-    </script>
+    <style>
+        .global-nav .search-bar input{
+            height:32px;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,13 +48,15 @@ window.location.replace("./25.php")        }
         if (isset($_COOKIE['username'])) {
             echo '
             <div class="nav-item right-nav-item">
-    <a href="user_center_userinfo.php">个人中心</a>
-    </div>
-    <div class="nav-item right-nav-item">
-        <b>' . $_COOKIE['usernickname'] . '</b>
-        <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
-    </div>
-    ';
+                <a href="user_center_userinfo.php">个人中心</a>
+            </div>
+            <div class="nav-item right-nav-item">
+                <b>' . $_COOKIE['usernickname'] . '</b>
+                <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
+            </div>
+            <div class="nav-item right-nav-item" id="reminder">
+                <a>提醒</a><div class="reminder-list"><ul><li>>&nbsp;&nbsp;您报名的“北大剧星风采大赛初赛”将于今天举行</li><li>>“数学文化节”的时间更改为2020年4月2日</li></ul></div>
+            </div>';
     } else {
     echo '
     <div class="nav-item right-nav-item">
@@ -71,19 +83,19 @@ window.location.replace("./25.php")        }
             <div class="ActivityDetailsUp">
 
                 <div class="UpPic"><img src=
-"pic/25.png"                      id="activity_pic"></div>
+"pic/25.png"                     id="activity_pic"></div>
                 <div class="UpText">
                     <div>活动名称：
-“空”降冬至，“政”在等你                </div>
+“空”降冬至，“政”在等你 </div>
                     <div>活动时间：
-2019年4月11日                    </div>
+2019年4月11日 </div>
                     <div>活动主办方：<a href="activity_host.html">
-北京大学极客实验室                    </a></div>
+北京大学极客实验室   </a></div>
                     <div>官方网页链接：<a href=
-"https://mp.weixin.qq.com/s/3W5geJeU0VqjQJtjRpcgyQ"                        >
-https://mp.weixin.qq.com/s/3W5geJeU0VqjQJtjRpcgyQ                    </a>
+"https://mp.weixin.qq.com/s/3W5geJeU0VqjQJtjRpcgyQ"            >
+https://mp.weixin.qq.com/s/3W5geJeU0VqjQJtjRpcgyQ        </a>
                     </div>
-                    <div>评分：10.0</div>
+                    <div>综合评分:10.0&nbsp;&nbsp;趣味:10.0&nbsp;&nbsp;意义:10.0&nbsp;&nbsp;秩序:10.0</div>
 
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_wishlist.png"
                                                                                      class="icon">加入心愿单
@@ -94,7 +106,7 @@ https://mp.weixin.qq.com/s/3W5geJeU0VqjQJtjRpcgyQ                    </a>
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_apply.png"
                                                                                      class="icon">立即报名
                     </button>
-                    <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_rate.png"
+                    <button class="button" type="submit"><img src="ico/icon_rate.png"
                                                                                      class="icon">评分
                     </button>
                 </div>
@@ -112,13 +124,12 @@ https://mp.weixin.qq.com/s/3W5geJeU0VqjQJtjRpcgyQ                    </a>
 
                 <br>
 
+
 冬至，是农历二十四节气中一个重要的节气，是一个重要的传统节日。冬至又称“冬节”，被视为冬季的大节日，在古代民间有“冬至大如年”的讲法。魏晋时的冬至日朝贺，就是仅次于正月大朝贺的重要日子，被称为亚朝。宋人以冬至为大三节之一，甚至直接说“十一月冬至，京师最重此节”。古时候，每到冬至，便有许多讲究的“仪式”，也正因有了这些“仪式”，让漫长的岁月有了分界线，使这一天与其他日子不同，使这一刻与其他时刻不同。
 正是在冬至日这样一个沉淀了千年情愫的日子里，我们基因深处对亲人的思念与对家庭的念想会百转千回，在我们心底盘桓。为了驱散这样一个应当充满喜悦与希望日子里的小小阴霾，政管、地空联合北大极客实验室为同学们奉上了冬至日联谊传统美食制作活动，除了让同学们更了解这个传统节日，联络同学们之间的感情，还希望可以给同学们带来冬日里的温暖、一些年味和家的感觉。
 休把心情关药裹，但逢节序添诗轴。冬至包饺子，攒火围炉，从锅中夹起热腾腾的饺子，塞到嘴里，暖意从舌尖沁入到心底里；冬至吃汤圆，流入心田的甜，团团圆圆的缘，快乐从一张张笑脸中荡起涟漪。
 除了制作冬至日传统美食——饺子、汤圆之外，我们还为同学们准备了编制中国结的体验环节，年味弥漫到更远方。
 还在等什么呢？快来点击阅读原文报名吧！先到先得哦！
-
-
             </div>
             <br><br>
         </div>

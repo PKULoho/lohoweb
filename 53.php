@@ -4,17 +4,27 @@
 <head>
     <meta charset="utf-8">
     <title>
-北大车协全国高校自行车交流赛    </title>
+北大车协全国高校自行车交流赛</title>
     <link rel="icon" type="image/png" href="ico/logo.png"/>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+    <script src="activity_details.js"></script>
+
+    <script>
+        function replaceDoc() {
+window.location.replace("./53.php")    </script>
+
     <link rel="stylesheet" href="global_navigation.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="activity_list.css">
     <link rel="stylesheet" href="activity_details.css">
 
-    <script>
-        function replaceDoc() {
-window.location.replace("./53.php")        }
-    </script>
+    <style>
+        .global-nav .search-bar input{
+            height:32px;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,13 +48,15 @@ window.location.replace("./53.php")        }
         if (isset($_COOKIE['username'])) {
             echo '
             <div class="nav-item right-nav-item">
-    <a href="user_center_userinfo.php">个人中心</a>
-    </div>
-    <div class="nav-item right-nav-item">
-        <b>' . $_COOKIE['usernickname'] . '</b>
-        <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
-    </div>
-    ';
+                <a href="user_center_userinfo.php">个人中心</a>
+            </div>
+            <div class="nav-item right-nav-item">
+                <b>' . $_COOKIE['usernickname'] . '</b>
+                <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
+            </div>
+            <div class="nav-item right-nav-item" id="reminder">
+                <a>提醒</a><div class="reminder-list"><ul><li>>&nbsp;&nbsp;您报名的“北大剧星风采大赛初赛”将于今天举行</li><li>>“数学文化节”的时间更改为2020年4月2日</li></ul></div>
+            </div>';
     } else {
     echo '
     <div class="nav-item right-nav-item">
@@ -71,19 +83,19 @@ window.location.replace("./53.php")        }
             <div class="ActivityDetailsUp">
 
                 <div class="UpPic"><img src=
-"pic/53.png"                      id="activity_pic"></div>
+"pic/53.png"                     id="activity_pic"></div>
                 <div class="UpText">
                     <div>活动名称：
-北大车协全国高校自行车交流赛                </div>
+北大车协全国高校自行车交流赛 </div>
                     <div>活动时间：
-2020年2月14日                    </div>
+2020年2月14日 </div>
                     <div>活动主办方：<a href="activity_host.html">
-北大车协                    </a></div>
+北大车协   </a></div>
                     <div>官方网页链接：<a href=
-"https://mp.weixin.qq.com/s/75VclNDuAINzx4YEx0tNHA"                        >
-https://mp.weixin.qq.com/s/75VclNDuAINzx4YEx0tNHA                    </a>
+"https://mp.weixin.qq.com/s/75VclNDuAINzx4YEx0tNHA"            >
+https://mp.weixin.qq.com/s/75VclNDuAINzx4YEx0tNHA        </a>
                     </div>
-                    <div>评分：10.0</div>
+                    <div>综合评分:10.0&nbsp;&nbsp;趣味:10.0&nbsp;&nbsp;意义:10.0&nbsp;&nbsp;秩序:10.0</div>
 
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_wishlist.png"
                                                                                      class="icon">加入心愿单
@@ -94,7 +106,7 @@ https://mp.weixin.qq.com/s/75VclNDuAINzx4YEx0tNHA                    </a>
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_apply.png"
                                                                                      class="icon">立即报名
                     </button>
-                    <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_rate.png"
+                    <button class="button" type="submit"><img src="ico/icon_rate.png"
                                                                                      class="icon">评分
                     </button>
                 </div>
@@ -111,6 +123,7 @@ https://mp.weixin.qq.com/s/75VclNDuAINzx4YEx0tNHA                    </a>
                 </div>
 
                 <br>
+
 
 北大车协全国高校自行车交流赛，简称“交流赛”或“北大赛”，是由北京大学自行车协会自主自办的全国高校自行车交流赛。
 从1998年北大赛的前身“北大——八达岭”自行车拉力赛，到2002年在铁壁银山的第一届北大赛，再到2018年在河北固安的全国高校自行车交流赛，时至今日，北大赛已举办了十六个年头。十六年间，北大赛不断发展，办赛地点从京郊铁壁银山、未名湖畔，到青龙湖、十三陵，再到延庆、固安，参赛范围也由北京拓展到全国多个省市。
@@ -145,8 +158,6 @@ https://mp.weixin.qq.com/s/75VclNDuAINzx4YEx0tNHA                    </a>
 说明：
 1.  “北大赛”报名和缴费方式将在报名网站更新维护结束后发布，大家可以关注北大车协微信公众号（capu1995）或关注北大车协微博（@CAPU北大车协），届时会在自媒体平台上第一时间发布，并通过邮件、联络群等方式告知各兄弟车协。
 2.  活动方案、交通方式、住宿情况将在交流赛报名期间发送至各高校车协，届时请查收。
-
-
             </div>
             <br><br>
         </div>

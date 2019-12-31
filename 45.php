@@ -4,17 +4,27 @@
 <head>
     <meta charset="utf-8">
     <title>
-圆桌骑士讨论会    </title>
+圆桌骑士讨论会</title>
     <link rel="icon" type="image/png" href="ico/logo.png"/>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+    <script src="activity_details.js"></script>
+
+    <script>
+        function replaceDoc() {
+window.location.replace("./45.php")    </script>
+
     <link rel="stylesheet" href="global_navigation.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="activity_list.css">
     <link rel="stylesheet" href="activity_details.css">
 
-    <script>
-        function replaceDoc() {
-window.location.replace("./45.php")        }
-    </script>
+    <style>
+        .global-nav .search-bar input{
+            height:32px;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,13 +48,15 @@ window.location.replace("./45.php")        }
         if (isset($_COOKIE['username'])) {
             echo '
             <div class="nav-item right-nav-item">
-    <a href="user_center_userinfo.php">个人中心</a>
-    </div>
-    <div class="nav-item right-nav-item">
-        <b>' . $_COOKIE['usernickname'] . '</b>
-        <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
-    </div>
-    ';
+                <a href="user_center_userinfo.php">个人中心</a>
+            </div>
+            <div class="nav-item right-nav-item">
+                <b>' . $_COOKIE['usernickname'] . '</b>
+                <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
+            </div>
+            <div class="nav-item right-nav-item" id="reminder">
+                <a>提醒</a><div class="reminder-list"><ul><li>>&nbsp;&nbsp;您报名的“北大剧星风采大赛初赛”将于今天举行</li><li>>“数学文化节”的时间更改为2020年4月2日</li></ul></div>
+            </div>';
     } else {
     echo '
     <div class="nav-item right-nav-item">
@@ -71,19 +83,19 @@ window.location.replace("./45.php")        }
             <div class="ActivityDetailsUp">
 
                 <div class="UpPic"><img src=
-"pic/45.png"                      id="activity_pic"></div>
+"pic/45.png"                     id="activity_pic"></div>
                 <div class="UpText">
                     <div>活动名称：
-圆桌骑士讨论会                </div>
+圆桌骑士讨论会 </div>
                     <div>活动时间：
-2020年1月10日                    </div>
+2020年1月10日 </div>
                     <div>活动主办方：<a href="activity_host.html">
-外院学生会                    </a></div>
+外院学生会   </a></div>
                     <div>官方网页链接：<a href=
-"https://mp.weixin.qq.com/s/8UiailAbjyEVeU9KyC2wDQ"                        >
-https://mp.weixin.qq.com/s/8UiailAbjyEVeU9KyC2wDQ                    </a>
+"https://mp.weixin.qq.com/s/8UiailAbjyEVeU9KyC2wDQ"            >
+https://mp.weixin.qq.com/s/8UiailAbjyEVeU9KyC2wDQ        </a>
                     </div>
-                    <div>评分：10.0</div>
+                    <div>综合评分:10.0&nbsp;&nbsp;趣味:10.0&nbsp;&nbsp;意义:10.0&nbsp;&nbsp;秩序:10.0</div>
 
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_wishlist.png"
                                                                                      class="icon">加入心愿单
@@ -94,7 +106,7 @@ https://mp.weixin.qq.com/s/8UiailAbjyEVeU9KyC2wDQ                    </a>
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_apply.png"
                                                                                      class="icon">立即报名
                     </button>
-                    <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_rate.png"
+                    <button class="button" type="submit"><img src="ico/icon_rate.png"
                                                                                      class="icon">评分
                     </button>
                 </div>
@@ -112,13 +124,12 @@ https://mp.weixin.qq.com/s/8UiailAbjyEVeU9KyC2wDQ                    </a>
 
                 <br>
 
+
     足球、弗拉明戈舞、斗牛、高迪、堂吉诃德、海鲜饭…相信大家对这些名词都很熟悉。缤纷多彩的西语世界文化早已突破地理界限，闻名世界，甚至融入其它国家地区及人民的文化生活中。西班牙语作为世界第二大语言，影响力更是不容小觑。没错，这次“圆桌骑士讨论会”的主题，就是“西语世界文化之旅”！
 本次活动面向全体外院人（外院系同学如报名需具备一定西语能力）和使用西班牙语的北京大学留学生群体展开，旨在为同学们，特别是学习西班牙语、对西语世界文化感兴趣的同学以共同交流探讨的平台。
 在“西语世界文化之旅”这个大主题下我们还设置了“语言与文学”、“历史与文化”、“学习与生活”、“饮食与旅游”四个子话题，供同学们深入探讨。
 与上次“圆桌骑士讨论会”不同，本次活动我们有幸邀请到了北京大学外国语学院西葡语系宋扬老师莅临指导。自由讨论环节中老师将与学生进行互动并点评同学们的发言。
       现场更有趣味小游戏、丰盛茶歇以及精美纪念礼品等你来体验！
-
-
             </div>
             <br><br>
         </div>

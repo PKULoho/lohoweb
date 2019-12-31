@@ -4,17 +4,27 @@
 <head>
     <meta charset="utf-8">
     <title>
-第二届世界马克思主义大会志愿者招募    </title>
+第二届世界马克思主义大会志愿者招募</title>
     <link rel="icon" type="image/png" href="ico/logo.png"/>
+
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <script src="layui/layui.js"></script>
+    <script src="activity_details.js"></script>
+
+    <script>
+        function replaceDoc() {
+window.location.replace("./44.php")    </script>
+
     <link rel="stylesheet" href="global_navigation.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="activity_list.css">
     <link rel="stylesheet" href="activity_details.css">
 
-    <script>
-        function replaceDoc() {
-window.location.replace("./44.php")        }
-    </script>
+    <style>
+        .global-nav .search-bar input{
+            height:32px;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,13 +48,15 @@ window.location.replace("./44.php")        }
         if (isset($_COOKIE['username'])) {
             echo '
             <div class="nav-item right-nav-item">
-    <a href="user_center_userinfo.php">个人中心</a>
-    </div>
-    <div class="nav-item right-nav-item">
-        <b>' . $_COOKIE['usernickname'] . '</b>
-        <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
-    </div>
-    ';
+                <a href="user_center_userinfo.php">个人中心</a>
+            </div>
+            <div class="nav-item right-nav-item">
+                <b>' . $_COOKIE['usernickname'] . '</b>
+                <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
+            </div>
+            <div class="nav-item right-nav-item" id="reminder">
+                <a>提醒</a><div class="reminder-list"><ul><li>>&nbsp;&nbsp;您报名的“北大剧星风采大赛初赛”将于今天举行</li><li>>“数学文化节”的时间更改为2020年4月2日</li></ul></div>
+            </div>';
     } else {
     echo '
     <div class="nav-item right-nav-item">
@@ -71,19 +83,19 @@ window.location.replace("./44.php")        }
             <div class="ActivityDetailsUp">
 
                 <div class="UpPic"><img src=
-"pic/44.png"                      id="activity_pic"></div>
+"pic/44.png"                     id="activity_pic"></div>
                 <div class="UpText">
                     <div>活动名称：
-第二届世界马克思主义大会志愿者招募                </div>
+第二届世界马克思主义大会志愿者招募 </div>
                     <div>活动时间：
-2020年2月8日                    </div>
+2020年2月8日 </div>
                     <div>活动主办方：<a href="activity_host.html">
-第二届世界马克思主义大会组委会                    </a></div>
+第二届世界马克思主义大会组委会   </a></div>
                     <div>官方网页链接：<a href=
-"https://mp.weixin.qq.com/s/ndW5WCBkBSbVUciSpcWj0A"                        >
-https://mp.weixin.qq.com/s/ndW5WCBkBSbVUciSpcWj0A                    </a>
+"https://mp.weixin.qq.com/s/ndW5WCBkBSbVUciSpcWj0A"            >
+https://mp.weixin.qq.com/s/ndW5WCBkBSbVUciSpcWj0A        </a>
                     </div>
-                    <div>评分：10.0</div>
+                    <div>综合评分:10.0&nbsp;&nbsp;趣味:10.0&nbsp;&nbsp;意义:10.0&nbsp;&nbsp;秩序:10.0</div>
 
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_wishlist.png"
                                                                                      class="icon">加入心愿单
@@ -94,7 +106,7 @@ https://mp.weixin.qq.com/s/ndW5WCBkBSbVUciSpcWj0A                    </a>
                     <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_apply.png"
                                                                                      class="icon">立即报名
                     </button>
-                    <button class="button" type="submit" onclick="replaceDoc()"><img src="ico/icon_rate.png"
+                    <button class="button" type="submit"><img src="ico/icon_rate.png"
                                                                                      class="icon">评分
                     </button>
                 </div>
@@ -111,6 +123,7 @@ https://mp.weixin.qq.com/s/ndW5WCBkBSbVUciSpcWj0A                    </a>
                 </div>
 
                 <br>
+
 
 经上级部门批准，北京大学将于2018年5月5日至6日举办第二届世界马克思主义大会，本届大会的主题为“马克思主义与人类命运共同体”。本届大会恰逢马克思诞辰200周年、《共产党宣言》发表170周年、中国改革开放40周年和北京大学120周年校庆之际，将是全世界马克思主义理论研究和科学社会主义伟大实践进程中具有里程碑意义的重大事件，同时也是北京大学120周年校庆系列重要活动之一。大会组委会将邀请近100位国外马克思主义相关研究领域的专家学者和政党人士、国内300余名著名专家学者与会。为保证大会圆满进行，大会组委会特采取公开招募、自愿报名、择优录用、定向服务的方式，面向全校招募志愿者。
 具体方案如下：
@@ -139,8 +152,6 @@ https://mp.weixin.qq.com/s/ndW5WCBkBSbVUciSpcWj0A                    </a>
 联系人：李健  李石生
 联系电话：62761078
 E-mail:smdhzyz2018@126.com
-
-
             </div>
             <br><br>
         </div>
