@@ -12,12 +12,12 @@
 </head>
 
 <body>
-    <nav class="global-nav">
-        <a href="index.html" id="global-nav-logo">
+<nav class="global-nav">
+        <a href="index.php" id="global-nav-logo">
             <img src="img/logo.png" height="100%">
         </a>
-        <div class="nav-item left-nav-item active">
-            <a href="index.html">首页</a>
+        <div class="nav-item left-nav-item">
+            <a href="index.php">首页</a>
         </div>
         <div class="nav-item left-nav-item">
             <a href="activity_list.php">分类</a>
@@ -31,12 +31,15 @@
         <?php
         if (isset($_COOKIE['username'])) {
             echo '
-            <div class="nav-item right-nav-item">
+            <div class="nav-item right-nav-item active">
                 <a href="user_center_userinfo.php">个人中心</a>
             </div>
             <div class="nav-item right-nav-item">
                 <b>' . $_COOKIE['usernickname'] . '</b>
                 <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
+            </div>
+            <div class="nav-item right-nav-item" id="reminder">
+                <a>提醒</a><div class="reminder-list"><ul><li>>&nbsp;&nbsp;您报名的“北大剧星风采大赛初赛”将于今天举行</li><li>>“数学文化节”的时间更改为2020年4月2日</li></ul></div>
             </div>';
         } else {
             echo '
@@ -58,7 +61,7 @@
             <div class="side-nav-header">个人中心</div>
             <div class="side-nav-modules">
                 <ul class="module-list">
-                    <a href="user_center_userinfo.html">
+                    <a href="user_center_userinfo.php">
                         <li class="module-item">个人信息</li>
                     </a>
                     <a href="user_center_collection.php">
