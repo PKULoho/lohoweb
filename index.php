@@ -14,11 +14,11 @@
 
 <body>
 <nav class="global-nav">
-    <a href="index.html" id="global-nav-logo">
+    <a href="index.php" id="global-nav-logo">
         <img src="img/logo.png" height="100%">
     </a>
     <div class="nav-item left-nav-item active">
-        <a href="index.html">首页</a>
+        <a href="index.php">首页</a>
     </div>
     <div class="nav-item left-nav-item">
         <a href="">分类</a>
@@ -91,7 +91,7 @@ $recommend=array();
 while(! feof($file))
   {
   array_push($yuanyin,fgetcsv($file)[0]);
-  array_push($jieguo,fgetcsv($file)[1]);
+  array_push($jieguo,fgetcsv($file)[0]);
   }
 $sql_query = "SELECT user_name,joined_act_id FROM joined_act";
 $ppp = $mysqli->query($sql_query, MYSQLI_STORE_RESULT);
@@ -109,7 +109,7 @@ echo'<br>
     //计数，智能推荐显示六个活动
     $itemcount=0;
     while ((list($id,$name,$first,$place) = $itemlist->fetch_row()) && $itemcount<6) {
-        echo '<a href="'.$id.'.html">
+        echo '<a href="'.$id.'.php">
         <div class="item">
             <div class="item-pic"><img src="pic/'.$id.'.png"></div>
             <div class="item-text">
@@ -128,7 +128,7 @@ echo'<br>
     $sql_query = "SELECT act_id,act_name,act_first_day,act_place FROM act_info WHERE act_first_day > '2020-01-03'";
     $itemlist = $mysqli->query($sql_query, MYSQLI_STORE_RESULT);
     while ((list($id,$name,$first,$place) = $itemlist->fetch_row()) && $itemcount<6) {
-        echo '<a href="'.$id.'.html">
+        echo '<a href="'.$id.'.php">
         <div class="item">
             <div class="item-pic"><img src="pic/'.$id.'.png"></div>
             <div class="item-text">
@@ -166,7 +166,7 @@ for($x=0;$x<$arrlength;$x++)
     //计数，每类显示六个活动
     $itemcount=0;
     while ((list($id,$name,$first,$place) = $itemlist->fetch_row()) && $itemcount<6) {
-        echo '<a href="'.$id.'.html">
+        echo '<a href="'.$id.'.php">
         <div class="item">
             <div class="item-pic"><img src="pic/'.$id.'.png"></div>
             <div class="item-text">
@@ -185,7 +185,7 @@ for($x=0;$x<$arrlength;$x++)
     $sql_query = "SELECT act_id,act_name,act_first_day,act_place FROM act_info WHERE act_first_day > '2020-01-03'";
     $itemlist = $mysqli->query($sql_query, MYSQLI_STORE_RESULT);
     while ((list($id,$name,$first,$place) = $itemlist->fetch_row()) && $itemcount<6) {
-        echo '<a href="'.$id.'.html">
+        echo '<a href="'.$id.'.php">
         <div class="item">
             <div class="item-pic"><img src="pic/'.$id.'.png"></div>
             <div class="item-text">
