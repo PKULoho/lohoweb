@@ -27,10 +27,10 @@
         <a href="index.php" id="global-nav-logo">
             <img src="img/logo.png" height="100%">
         </a>
-        <div class="nav-item left-nav-item active">
+        <div class="nav-item left-nav-item">
             <a href="index.php">首页</a>
         </div>
-        <div class="nav-item left-nav-item">
+        <div class="nav-item left-nav-item active">
             <a href="activity_list.php">分类</a>
         </div>
         <div class="search-bar">
