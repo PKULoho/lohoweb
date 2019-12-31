@@ -79,6 +79,8 @@
     if (isset($_GET['host'])) $host = $_GET['host'];
     $location = null;
     if (isset($_GET['location'])) $location = $_GET['location'];
+    $rate = null;
+    if (isset($_GET['rate'])) $rate = $_GET['rate'];
     ?>
     <div class="list a">
         <ul class="each_list">
@@ -211,6 +213,25 @@
             }
             ?>
         </ul>
+        <br>
+        <hr>
+        <ul class="each_list">
+            <li class="theme">评分：</li>
+            <?php
+            if ($rate == null) $rate = 0;
+            $rate_map = [
+                0 => "全部",
+                1 => "8分及以上",
+                2 => "6-8分",
+                3 => "6分以下",
+            ];
+            for ($i = 0; $i < count($rate_map); $i++) {
+                echo '<li getid="' . $i . '"';
+                if ($rate == $i) echo ' class="active"';
+                echo '>' . $rate_map[$i] . '</li>';
+            }
+            ?>
+        </ul>
     </div>
 
     <!--活动列表-左侧-->
@@ -308,6 +329,19 @@
                     break;
             }
         }
+        if (isset($_GET['rate'])) {
+            switch ($rate) {
+                case 1:
+                    $sqlstr = $sqlstr . ' AND act_score >= 4';
+                    break;
+                case 2:
+                    $sqlstr = $sqlstr . ' AND act_score between 3 and 4';
+                    break;
+                case 3:
+                    $sqlstr = $sqlstr . ' AND act_score < 3';
+                    break;
+            }
+        }
 
         //echo $sqlstr . '<br>';
 
@@ -351,7 +385,7 @@
 
             echo '
                     <div class="collection-item">
-                    <a href="">
+                    <a href="'.$act_id.'.php">
                         <img src="pic/' . $act_id . '.png" alt="' . $act_name . '">
                         <div class="activity-info">
                             <div class="info-item">活动名：' . $act_name . '</div>

@@ -37,6 +37,12 @@ window.onload = function () {
             newFilter("location", this.getAttribute("getid"));
         });
     }
+    var rate_list = each_list[6].getElementsByTagName("li");
+    for (var i = 1; i < rate_list.length; i++) {
+        rate_list[i].addEventListener("click", function () {
+            newFilter("rate", this.getAttribute("getid"));
+        });
+    }
 
     $(document).ready(function () {
         var startEndDay = getStartEndDay();
