@@ -64,7 +64,7 @@
 <div class="fix"></div>
 <br>
 <div class="mainpic" style="width: 1200px;height: 356px; margin: 0 auto; text-align: center;">
-    <img src="pic/main.jpg" style="width: 1057px;height: 356px; ">
+    <a href="30.php"><img src="pic/main.jpg" style="width: 1057px;height: 356px; "></a>
 </div>
 <br>
 <div class="categories"
