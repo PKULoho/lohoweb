@@ -134,6 +134,7 @@ body {
 .reminder-list ul {
     padding: 0;
     vertical-align: middle;
+    list-style-type: none;
 }
 
 .reminder-list li {
