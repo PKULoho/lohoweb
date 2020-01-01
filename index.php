@@ -64,34 +64,49 @@
 <div class="fix"></div>
 <br>
 <div class="mainpic" style="width: 1200px;height: 356px; margin: 0 auto; text-align: center;">
-    <a href="30.php"><img src="pic/main.jpg" style="width: 1057px;height: 356px; "></a>
+    <a href="30.php"><img src="pic/main.jpg" style="width: 1100px; "></a>
 </div>
 <br>
-<div class="categories"
-     style="width: 1265px;height: 61px; margin: 0 auto; text-align: center; background-color: #FFDBC5">
-    <a href="#jiangzuo">
-        <button class="button" type="button">讲座</button>
+<div class="categories">
+    <a href="activity_list.php?type=1">
+    <div class="category-item">
+        <button class="button" type="button"><i class="icon icon-jiangzuo"></i>讲座</button>
+    </div>
     </a>
-    <a href="#bisai">
-        <button class="button" type="button" style="margin-left: 10px">比赛</button>
+    <a href="activity_list.php?type=2">
+    <div class="category-item">
+        <button class="button" type="button"><i class="icon icon-bisai"></i>比赛</button>
+    </div>
     </a>
-    <a href="#yanchu">
-        <button class="button" type="button" style="margin-left: 10px">演出</button>
+    <a href="activity_list.php?type=3">
+    <div class="category-item">
+        <button class="button" type="button"><i class="icon icon-yanchu"></i>演出</button>
+    </div>
     </a>
-    <a href="#tiyan">
-        <button class="button" type="button" style="margin-left: 10px">体验类活动</button>
+    <a href="activity_list.php?type=4">
+    <div class="category-item">
+        <button class="button" type="button" style="padding-left:0;font-size:14px"><i class="icon icon-tiyan"></i>体验类活动</button>
+    </div>
     </a>
-    <a href="#zhiyuan">
-        <button class="button" type="button" style="margin-left: 10px">志愿活动</button>
+    <a href="activity_list.php?type=5">
+    <div class="category-item">
+        <button class="button" type="button"><i class="icon icon-zhiyuan"></i>志愿活动</button>
+    </div>
     </a>
-    <a href="#shehui">
-        <button class="button" type="button" style="margin-left: 10px">社会实践</button>
+    <a href="activity_list.php?type=6">
+    <div class="category-item">
+        <button class="button" type="button"><i class="icon icon-shijian"></i>社会实践</button>
+    </div>
     </a>
-    <a href="#luntan">
-        <button class="button" type="button" style="margin-left: 10px">论坛/会议</button>
+    <a href="activity_list.php?type=7">
+    <div class="category-item">
+        <button class="button" type="button"><i class="icon icon-luntan"></i>论坛/会议</button>
+    </div>
     </a>
-    <a href="#qita">
-        <button class="button" type="button" style="margin-left: 10px">其他活动</button>
+    <a href="activity_list.php?type=8">
+    <div class="category-item">
+        <button class="button" type="button"><i class="icon icon-qita"></i>其他活动</button>
+    </div>
     </a>
 
 </div>
@@ -127,7 +142,8 @@ $ppp = $mysqli->query($sql_query, MYSQLI_STORE_RESULT);
 $alreadybought=$ppp->fetch_row();
 
 
-echo'<br>
+echo'<div class="category-container">
+<br>
 <div class="category" id="zhineng">智能推荐</div>
 <div class="items">';
 
@@ -172,7 +188,7 @@ echo'<br>
     }
 
     
-    echo '</div>';
+    echo '</div></div>';
 
 
 
@@ -184,8 +200,9 @@ $arrlength=count($pinyin);
 
 for($x=0;$x<$arrlength;$x++)
 {
-    echo'<br>
-<div class="category" id="'.$pinyin[$x].'">'.$chinese[$x].'</div>
+    echo'<div class="category-container">
+    <br>
+<div class="category" id="'.$pinyin[$x].'">'.$chinese[$x].'<span><a href="activity_list.php?type='.($x+1).'">更多 ></a></span></div>
 <div class="items">';
 
     $sql_query = "SELECT act_id,act_name,act_first_day,act_place FROM act_info WHERE act_type = '".$chinese[$x]."' and act_first_day > '2020-01-03'";
@@ -229,7 +246,7 @@ for($x=0;$x<$arrlength;$x++)
     }
 
     
-    echo '</div>';
+    echo '</div></div>';
 
 }
 

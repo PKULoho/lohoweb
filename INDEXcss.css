@@ -1,35 +1,42 @@
+body {
+    background-color: #f2f2f2;
+}
+
 .categories button {
-    width: 131px;
+    width: 135px;
     height: 61px;
-    background-color: rgba(250, 145, 158, 1);
-    border-style: outset;
+    background-color: #ffffff;
+    border-style: none;
     border-radius: 5px;
+    border-color: #ffffff;
     font-family: 'PingFangSC-Regular', 'PingFang SC';
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
     color: black;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+.categories button:focus {
+    outline: none;
 }
 
 .items {
     width: 1080px;
     height: 290px;
     margin: 0 auto;
-
+    margin-bottom: 20px;
 }
 
-
 .item {
-
     width: 350px;
     height: 140px;
     float: left;
     margin-left: 10px;
-
 }
 
 .item-pic {
-
     width: 126px;
     height: 140px;
     float: left;
@@ -51,21 +58,166 @@
     font-weight: bold;
 }
 
+.item-heading:hover{
+    color: #f67280;
+}
+
 .item-pic img {
     border-width: 0px;
     margin: 5px;
-
     width: 116px;
     height: 130px;
 }
 
+.category-container {
+    width: 1080px;
+    padding-left: 10px;
+    padding-right: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: 20px;
+    border-width: 1px;
+    border-color: #e6e6e6;
+    border-style: solid;
+    background-color: white;
+}
 
 .category {
-    width: 980px;
-
+    width: 1050px;
     margin: 0 auto;
+    margin-bottom: 20px;
     font-family: 'PingFang SC';
     font-size: 23px;
     color: #C7737D;
     font-weight: bold;
+}
+
+.category span {
+    float: right;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.category span a {
+    color: #707070;
+    text-decoration: none;
+}
+
+.category span a:hover {
+    text-decoration: underline;
+}
+
+.categories {
+    width: 1100px;
+    height: 61px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-width: 1px;
+    border-color: #e6e6e6;
+    border-style: solid;
+    background-color: white;
+}
+
+.categories .category-item {
+    float: left;
+}
+
+.categories .category-item .button {
+    color: #707070;
+}
+
+.categories .category-item .button:hover {
+    cursor: pointer;
+    color: #f67280;
+}
+
+.categories .icon {
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    margin-right: 10px;
+    line-height: 40px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.icon-jiangzuo {
+    background-image: url("ico/index_types/1_0.png");
+}
+
+.categories .category-item:hover .icon-jiangzuo {
+    background-image: url("ico/index_types/1_1.png");
+    cursor: pointer;
+}
+
+.icon-bisai {
+    background-image: url("ico/index_types/2_0.png");
+}
+
+.categories .category-item:hover .icon-bisai {
+    background-image: url("ico/index_types/2_1.png");
+    cursor: pointer;
+}
+
+.icon-yanchu {
+    background-image: url("ico/index_types/3_0.png");
+}
+
+.categories .category-item:hover .icon-yanchu {
+    background-image: url("ico/index_types/3_1.png");
+    cursor: pointer;
+}
+
+.icon-tiyan {
+    background-image: url("ico/index_types/4_0.png");
+}
+
+.categories .category-item:hover .icon-tiyan {
+    background-image: url("ico/index_types/4_1.png");
+    cursor: pointer;
+}
+
+.icon-zhiyuan {
+    background-image: url("ico/index_types/5_0.png");
+}
+
+.categories .category-item:hover .icon-zhiyuan {
+    background-image: url("ico/index_types/5_1.png");
+    cursor: pointer;
+}
+
+.icon-shijian {
+    background-image: url("ico/index_types/6_0.png");
+}
+
+.categories .category-item:hover .icon-shijian {
+    background-image: url("ico/index_types/6_1.png");
+    cursor: pointer;
+}
+
+.icon-luntan {
+    background-image: url("ico/index_types/7_0.png");
+}
+
+.categories .category-item:hover .icon-luntan {
+    background-image: url("ico/index_types/7_1.png");
+    cursor: pointer;
+}
+
+.icon-qita {
+    background-image: url("ico/index_types/8_0.png");
+}
+
+.categories .category-item:hover .icon-qita {
+    background-image: url("ico/index_types/8_1.png");
+    cursor: pointer;
 }
