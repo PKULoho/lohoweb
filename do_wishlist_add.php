@@ -12,4 +12,4 @@ $stmt = $conn->prepare("INSERT INTO collection_act VALUES (?, ?)");
 $stmt->bind_param("si", $username, intval($act_id));
 $stmt->execute();
 
-echo '<script>self.location=document.referrer;</script>';
+echo '<script>alert("添加成功！");self.location=document.referrer;</script>';
