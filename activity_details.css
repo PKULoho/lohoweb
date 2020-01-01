@@ -169,3 +169,10 @@
     float: left;
     margin: 3px 3px 3px 3px;
 }
+
+
+  body .demo-class .layui-layer-btn0{
+    border-color: #f76968;
+    background-color: #f76968;
+    color: white;
+  }

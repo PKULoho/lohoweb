@@ -17,6 +17,7 @@ window.onload = function () {
             , content: 'assets/rate.html'
             , title: '请评分'
             , area: ['300px', '380px']
+            , skin: 'demo-class'
         });
     });
 }
