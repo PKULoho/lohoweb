@@ -71,7 +71,7 @@
                         <button class="login-btn" type="submit" style="top: 280px;left: 190px;">登 录</button>
                     </form>
                     <div class="register-link">
-                        <a href="register.html">新用户注册</a>&nbsp;&nbsp;
+                        <a href="register.php">新用户注册</a>&nbsp;&nbsp;
                         <a href="#">忘记密码</a>
                     </div>
                 </div>
