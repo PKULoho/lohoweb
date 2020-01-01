@@ -1,17 +1,17 @@
 /*
- Navicat Premium Data Transfer
+ Navicat MySQL Data Transfer
 
- Source Server         : mySqlConnection
+ Source Server         : loho
  Source Server Type    : MySQL
- Source Server Version : 80018
- Source Host           : localhost:3306
+ Source Server Version : 50723
+ Source Host           : localhost:8889
  Source Schema         : loho
 
  Target Server Type    : MySQL
- Target Server Version : 80018
+ Target Server Version : 50723
  File Encoding         : 65001
 
- Date: 31/12/2019 14:46:26
+ Date: 01/01/2020 20:24:12
 */
 
 SET NAMES utf8mb4;
@@ -21,14 +21,15 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- Table structure for act_host_relationship
 -- ----------------------------
 DROP TABLE IF EXISTS `act_host_relationship`;
-CREATE TABLE `act_host_relationship`  (
-  `act_id` int(255) NULL DEFAULT NULL,
-  `host_id` int(255) NULL DEFAULT NULL
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+CREATE TABLE `act_host_relationship` (
+  `act_id` int(255) DEFAULT NULL,
+  `host_id` int(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of act_host_relationship
 -- ----------------------------
+BEGIN;
 INSERT INTO `act_host_relationship` VALUES (1, 1);
 INSERT INTO `act_host_relationship` VALUES (2, 2);
 INSERT INTO `act_host_relationship` VALUES (2, 2);
@@ -117,33 +118,35 @@ INSERT INTO `act_host_relationship` VALUES (57, 39);
 INSERT INTO `act_host_relationship` VALUES (58, 39);
 INSERT INTO `act_host_relationship` VALUES (59, 40);
 INSERT INTO `act_host_relationship` VALUES (60, 40);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for act_info
 -- ----------------------------
 DROP TABLE IF EXISTS `act_info`;
-CREATE TABLE `act_info`  (
+CREATE TABLE `act_info` (
   `act_id` int(20) NOT NULL,
-  `act_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `act_type` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `act_intro` varchar(10000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `act_score` float NULL DEFAULT NULL,
-  `act_first_day` date NULL DEFAULT NULL,
-  `act_time` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `act_place` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `need_apply` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `in_pku` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `in_thu` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `in_beijing` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `doc_path` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `update_freq` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `ord_website` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `act_name` varchar(255) DEFAULT NULL,
+  `act_type` varchar(255) DEFAULT NULL,
+  `act_intro` varchar(10000) DEFAULT NULL,
+  `act_score` float DEFAULT NULL,
+  `act_first_day` date DEFAULT NULL,
+  `act_time` varchar(255) DEFAULT NULL,
+  `act_place` varchar(255) DEFAULT NULL,
+  `need_apply` varchar(255) DEFAULT NULL,
+  `in_pku` varchar(255) DEFAULT NULL,
+  `in_thu` varchar(255) DEFAULT NULL,
+  `in_beijing` varchar(255) DEFAULT NULL,
+  `doc_path` varchar(255) DEFAULT NULL,
+  `update_freq` varchar(255) DEFAULT NULL,
+  `ord_website` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`act_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of act_info
 -- ----------------------------
+BEGIN;
 INSERT INTO `act_info` VALUES (1, '数学文化节', '其他', '百讲文化展示来了\n亲爱的各位同学：\n本周末我邀请了数学王国的大魔术师来到百讲，带来王国最新的魔术表演。数学王国的居民们也设计了许多趣味（直男）游戏供勇士们体验。\n同时，国王为了感谢勇士们拯救数学王国，带来了许多不同形态的识数鸡奖品哦！笔记本、文件夹、钥匙扣应有尽有！（实物图先容本鸡卖个关子，细心的同学可能会在最近的推送中找到他们的踪影喔）\n10月20日百讲文化展示\n参加即有机会获得\n精美的小礼物和识数鸡周边\n 什么？只是有机会啊？\n那具体是什么规则呢？\n别急，且听本鸡细细道来！\n10月20日，请首先去百讲广场领票处领取门票，之后即可参加“百讲数学文化展示“活动了。届时，现场会有很多精彩的游戏以及精彩的魔术表演等待着你们。参加游戏，达成游戏目标可以获得若干奖章，发挥你的聪明才智以获取尽可能多的奖章吧！收集的奖章可以兑换精美奖品哦。\n奖章x2——纪念奖\n奖章x6——周边文件夹/钥匙链二选一\n奖章x10——周边笔记本\n（奖品可重复兑换 另有神秘返场周边随机掉落）\n奖品有限，先到先得～\n10月20日百讲，不见不散~\n我，识数鸡在等着你们哦~', NULL, '2020-02-07', '20191020', '百讲广场', '否', '是', '否', '是', '/html/1.html; /html/1_files/; /pic/1.png', '几乎不更新', 'https://mp.weixin.qq.com/s/vkojb5lwadxQ9hwqwUXSJg');
 INSERT INTO `act_info` VALUES (2, '“雏燕新羽，舞光十色”十院联合舞会', '其他', '“雏燕新羽，舞光十色”十院联合新生舞会\n1. 承办单位：数学科学学院、信息科学技术学院、元培学院、政府管理学院、新闻与传播学院、社会学系、中国语言文学系、哲学系、国际关系学院、历史学系\n2. 舞会时间：2019年10月12、13日18：30\n3. 舞会地点：北京市海淀区颐和园路12号（锡华商务酒店地下一层宴会厅）', NULL, '2020-01-30', '20191012 1830, 20191013 1830', '北京市海淀区颐和园路12号（锡华商务酒店地下一层宴会厅）', '是', '否', '否', '是', '/html/2.html; /html/2_files/; /pic/2.png', '几乎不更新', 'https://mp.weixin.qq.com/s/TRbPnobmp44WUEErDnrp0g');
 INSERT INTO `act_info` VALUES (3, '第十三届全国图书馆学博士生学术论坛', '论坛/会议', '2019年第13届“全国图书馆学博士生学术论坛”受教育部“研究生教育创新计划”资助，由北京大学信息管理系主办。本次论坛将于11月9日—10日在北京大学举行，主题是“图书馆变革与发展：效能、智能、赋能”。\n本着增进学术交流，建设开放、国际性的学术交流平台，推出创新成果，提高博士生的科研创新能力，特此诚挚邀请您拨冗出席，莅临指导。', NULL, '2020-02-27', '20191109, 20191110', '北京大学英杰交流中心（阳光厅）', '是', '是', '否', '是', '/html/3.html; /html/3_files/; /pic/3.png', '几乎不更新', 'https://mp.weixin.qq.com/s/b_bmgs_i1AKG_AekXZxbWw');
@@ -204,19 +207,21 @@ INSERT INTO `act_info` VALUES (57, '《两杆大烟枪》', '其他', '艾迪思
 INSERT INTO `act_info` VALUES (58, '《你的名字》', '其他', '在远离城市的小山村，住着巫女世家出身的高中女孩宫水三叶。校园和家庭的原因本就让她充满烦恼，许是受那颗神秘彗星的影响，三叶在梦中就会变成一个住在东京的高中男孩。那里有陌生的同学和朋友，有亲切的前辈和繁华的街道，一切都是如此诱人而真实。另一方面，住在东京的高中男孩立花泷则总在梦里来到陌生的小山村，以女孩子的身份过着全新的生活，他们都以他者的角度体验着对方的人生，然而，这背后却有锥心的现实。\n 梦中就能交换灵魂，黄昏之时时空就会错乱，结绳就能连接，口嚼酒能回到过去，万物皆是神灵，错过的也终会相遇。陨石散落的瞬间野田洋次郎的乐声响起，让灾难也和美好相连；在最终泷改变了过去的这个情绪高点，却让彼此相互遗忘，就像日本人爱的凋谢在最美丽时刻的樱花，这部电影也透出浓郁的物哀之美。新海诚给我们编织了一个美丽的童话梦。\n其实放这部电影也有笔者的私心，想要弥补当初上映时没有去看的遗憾。在繁忙的学习生活中，来抽空看一部轻松的电影吧。', NULL, '2020-02-07', '20191020 1840', '文史楼204', '否', '是', '否', '是', '/html/58.html; /html/58_files/; /pic/58.png', '几乎不更新', 'https://mp.weixin.qq.com/s/ywDMnvsxRGqWeYm_atsCTw');
 INSERT INTO `act_info` VALUES (59, '讲座 | 奇妙胶片', '其他', 'Timothy Wang\nGluggaveður Press 主编\nGetty 签约艺术家\n美联社通讯摄影师\n罗切斯特理工学院摄影专业研究生\n知乎摄影领域优秀回答者\n2018 知乎荣誉会员\n…\n…\n分享主题\n关于摄影的非典型作品形式展示\n中画幅和大画幅成像设备的使用介绍\nTimothy在天津的工作室\n个人作品分享\n答疑与交流\n具体内容\n作品分享\n    再见，谢谢你们的鱼\n    逃离黄石公园\n    （https://zhuanlan.zhihu.com/p/54693446）\n彩色暗房照片\n    彩色放大和化学冲洗的照片\n    向听众展示实体的联系表\n手工书\n    欧式古典装帧本:最高等级的装帧形式 \n    现代精装:一本正在制作的作品集\n    艺术家书:包括实物和一些视频', NULL, '2020-02-13', '20191026 1400', '二教422', '否', '是', '否', '是', '/html/59.html; /html/59_files/; /pic/59.png', '几乎不更新', 'https://mp.weixin.qq.com/s/kc1WnQhioaVWwjwtBNDwnw');
 INSERT INTO `act_info` VALUES (60, '摄影班 | 基础班报名', '其他', '2019年秋季学期，北大青年摄影学会推出5期摄影课程：\n摄影基础班\n手机摄影班\nVlog班\n肖像班\n胶片班\n所有课程面向青年摄影学会成员开放。\n大家可以根据自己对摄影的掌握情况报名一个或多个摄影班，各摄影班时间不冲突，可自由选择。（关于Vlog班的推送将在之后发出）\n报名方式在最后\n摄影基础班\n课程内容：\n注：为了方便大家上课，部分课程可能采取网上直播（QQ群直播）的形式，但学会不提供录播视频，允许学员自行录屏。具体上课形式招新完成后会与大家协商。\n第一节：相机基础&摄影器材购买指导\n带你了解光圈、快门、感光度；色温、色调；成像原理、画幅、焦段 & 超良心摄影器材购买指导。\n第二节：LR基础+基础调色演示\nLR基础：LR面板介绍、色温、色调、对比度、高光阴影白色黑色、曲线工具、HSL、色调分离、镜头校正、如何看直方图。\n第三节：PS基础+人像修图演示\nPS基础：PS面板介绍、ACR（同LR）、基本磨皮操作（中性灰磨皮）、人像修图基本步骤。\n第四节：外拍实践\n由4-5名外拍经验丰富的大牛分别带队，组织校内外外拍活动，每组人数10人以内。时间非固定，会穿插在整个学期进行。\n第五节：人像摄影经验分享\n第六节：风光摄影经验分享\n第七节：人文摄影经验分享及摄影理念\n第八节：胶片入门及暗房体验/棚拍简介（二选一）\n \n开班人数：100以内\n时间：10.7起，每周六晚18:40-20:30\n面向对象：青年摄影学会成员  \n费用：100/人/学期\n报名方式\n招新结束后会在YASP大群里公布基础班二维码', NULL, NULL, '长期', '待定', '是', '待定', '待定', '待定', '/html/60.html; /html/60_files/; /pic/60.png', '几乎不更新', 'https://mp.weixin.qq.com/s/jLAMzJlQcR1PJXBmNdPmSA');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for act_subject
 -- ----------------------------
 DROP TABLE IF EXISTS `act_subject`;
-CREATE TABLE `act_subject`  (
-  `act_id` int(11) NULL DEFAULT NULL,
-  `act_subject` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+CREATE TABLE `act_subject` (
+  `act_id` int(11) DEFAULT NULL,
+  `act_subject` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of act_subject
 -- ----------------------------
+BEGIN;
 INSERT INTO `act_subject` VALUES (1, '学术');
 INSERT INTO `act_subject` VALUES (2, '生活');
 INSERT INTO `act_subject` VALUES (3, '学术');
@@ -277,52 +282,66 @@ INSERT INTO `act_subject` VALUES (57, NULL);
 INSERT INTO `act_subject` VALUES (58, '其他');
 INSERT INTO `act_subject` VALUES (59, '学术');
 INSERT INTO `act_subject` VALUES (60, '其他');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for applied_act
 -- ----------------------------
 DROP TABLE IF EXISTS `applied_act`;
-CREATE TABLE `applied_act`  (
-  `user_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `applied_act_id` int(11) NULL DEFAULT NULL
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+CREATE TABLE `applied_act` (
+  `user_name` varchar(255) DEFAULT NULL,
+  `applied_act_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of applied_act
 -- ----------------------------
+BEGIN;
 INSERT INTO `applied_act` VALUES ('dxk', 8);
 INSERT INTO `applied_act` VALUES ('dxk', 5);
+INSERT INTO `applied_act` VALUES ('dxk', 30);
+INSERT INTO `applied_act` VALUES ('dxk', 40);
+INSERT INTO `applied_act` VALUES ('dxk', 12);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for collection_act
 -- ----------------------------
 DROP TABLE IF EXISTS `collection_act`;
-CREATE TABLE `collection_act`  (
-  `user_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `collection_act_id` int(11) NULL DEFAULT NULL
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+CREATE TABLE `collection_act` (
+  `user_name` varchar(255) DEFAULT NULL,
+  `collection_act_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of collection_act
 -- ----------------------------
+BEGIN;
 INSERT INTO `collection_act` VALUES ('dxk', 44);
 INSERT INTO `collection_act` VALUES ('dxk', 5);
+INSERT INTO `collection_act` VALUES ('dxk', 1);
+INSERT INTO `collection_act` VALUES ('dxk', 8);
+INSERT INTO `collection_act` VALUES ('dxk', 2);
+INSERT INTO `collection_act` VALUES ('dxk', 6);
+INSERT INTO `collection_act` VALUES ('dxk', 12);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for host_info
 -- ----------------------------
 DROP TABLE IF EXISTS `host_info`;
-CREATE TABLE `host_info`  (
+CREATE TABLE `host_info` (
   `host_id` int(255) NOT NULL,
-  `host_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `host_intro` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `host_name` varchar(255) DEFAULT NULL,
+  `host_intro` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`host_id`) USING BTREE,
-  INDEX `host_id`(`host_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+  KEY `host_id` (`host_id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of host_info
 -- ----------------------------
+BEGIN;
 INSERT INTO `host_info` VALUES (1, '数院学生会', NULL);
 INSERT INTO `host_info` VALUES (2, '数学科学学院', NULL);
 INSERT INTO `host_info` VALUES (3, '信息科学技术学院', NULL);
@@ -363,33 +382,37 @@ INSERT INTO `host_info` VALUES (37, '北大车协', NULL);
 INSERT INTO `host_info` VALUES (38, '北大粤协', NULL);
 INSERT INTO `host_info` VALUES (39, '北大影协', NULL);
 INSERT INTO `host_info` VALUES (40, '北京大学青年摄影学会', NULL);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for joined_act
 -- ----------------------------
 DROP TABLE IF EXISTS `joined_act`;
-CREATE TABLE `joined_act`  (
-  `user_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `joined_act_id` int(11) NULL DEFAULT NULL
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+CREATE TABLE `joined_act` (
+  `user_name` varchar(255) DEFAULT NULL,
+  `joined_act_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of joined_act
 -- ----------------------------
+BEGIN;
 INSERT INTO `joined_act` VALUES ('dxk', 43);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for sim_act
 -- ----------------------------
 DROP TABLE IF EXISTS `sim_act`;
-CREATE TABLE `sim_act`  (
-  `act_id` int(11) NULL DEFAULT NULL,
-  `sim_act_id` int(11) NULL DEFAULT NULL
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+CREATE TABLE `sim_act` (
+  `act_id` int(11) DEFAULT NULL,
+  `sim_act_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of sim_act
 -- ----------------------------
+BEGIN;
 INSERT INTO `sim_act` VALUES (1, 49);
 INSERT INTO `sim_act` VALUES (2, 4);
 INSERT INTO `sim_act` VALUES (2, 5);
@@ -726,27 +749,30 @@ INSERT INTO `sim_act` VALUES (59, 60);
 INSERT INTO `sim_act` VALUES (59, 31);
 INSERT INTO `sim_act` VALUES (60, 56);
 INSERT INTO `sim_act` VALUES (60, 59);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for user_info
 -- ----------------------------
 DROP TABLE IF EXISTS `user_info`;
-CREATE TABLE `user_info`  (
-  `user_id` int(11) NULL DEFAULT NULL,
-  `user_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `user_sex` varchar(2) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `real_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `student_num` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `user_dep` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `user_avatar` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `user_tel` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `user_password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+CREATE TABLE `user_info` (
+  `user_id` int(11) DEFAULT NULL,
+  `user_name` varchar(255) DEFAULT NULL,
+  `user_sex` varchar(2) DEFAULT NULL,
+  `real_name` varchar(255) DEFAULT NULL,
+  `student_num` varchar(255) DEFAULT NULL,
+  `user_dep` varchar(255) DEFAULT NULL,
+  `user_avatar` varchar(255) DEFAULT NULL,
+  `user_tel` varchar(255) DEFAULT NULL,
+  `user_password` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of user_info
 -- ----------------------------
+BEGIN;
 INSERT INTO `user_info` VALUES (1, 'dxk', '女', '董小葵', '1800016640', '信息管理系', '', '13700000001', 'abcd');
 INSERT INTO `user_info` VALUES (2, 'zxh', '女', '张小涵', '1800016658', '信息管理系', NULL, '13800000000', 'abcd');
+COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
