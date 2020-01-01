@@ -100,7 +100,7 @@
     </a>
     <a href="activity_list.php?type=7">
     <div class="category-item">
-        <button class="button" type="button"><i class="icon icon-luntan"></i>论坛/会议</button>
+        <button class="button" type="button" style="padding-left:0;font-size:14px"><i class="icon icon-luntan"></i>论坛/会议</button>
     </div>
     </a>
     <a href="activity_list.php?type=8">
