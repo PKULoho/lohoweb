@@ -12,7 +12,7 @@
 </head>
 
 <body>
-<nav class="global-nav">
+    <nav class="global-nav">
         <a href="index.php" id="global-nav-logo">
             <img src="img/logo.png" height="100%">
         </a>
@@ -121,7 +121,7 @@
 
                         echo '
                     <div class="collection-item">
-                        <a href="">
+                        <a href="' . $act_id . '.php">
                             <img src="pic/' . $act_id . '.png" alt="' . $act_name . '">
                             <div class="activity-info">
                                 <div class="info-item">活动名：' . $act_name . '</div>
@@ -136,7 +136,8 @@
                         } else if (strtotime($row['act_first_day']) < time()) {
                             echo '<div><a href="dojoin.php?id=' . $act_id . '" class="activity-option">标为已参加</a></div>';
                         }
-                        echo '<div><a href="" class="activity-option">查看详情</a></div>
+                        echo '<div><a href="' . $act_id . '.php" class="activity-option">查看详情</a></div>
+                        <div><a href="doremovewishlist.php?id=' . $act_id . '" class="activity-option">移出心愿单</a></div>
                         </div>
                     </div>';
                     }

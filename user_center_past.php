@@ -104,7 +104,7 @@
 
                         echo '
                     <div class="collection-item">
-                        <a href="">
+                        <a href="'.$act_id.'.php">
                             <img src="pic/' . $act_id . '.png" alt="' . $act_name . '">
                             <div class="activity-info">
                                 <div class="info-item">活动名：' . $act_name . '</div>
@@ -114,7 +114,7 @@
                             </div>
                         </a>
                         <div class="activity-options"><br><br><br>';
-                        echo '<div><a href="" class="activity-option">查看详情</a></div>
+                        echo '<div><a href="'.$act_id.'.php" class="activity-option">查看详情</a></div>
                         </div>
                     </div>';
                     }
@@ -142,7 +142,7 @@
 
                         echo '
                     <div class="collection-item">
-                        <a href="">
+                        <a href="'.$act_id.'.php">
                             <img src="pic/' . $act_id . '.png" alt="' . $act_name . '">
                             <div class="activity-info">
                                 <div class="info-item">活动名：' . $act_name . '</div>
@@ -154,7 +154,7 @@
                         <div class="activity-options"><br><br><br>';
                         echo '
                         <div><a href="dojoin.php?' . $act_id . '" class="activity-option">标为已参加</a></div>
-                        <div><a href="" class="activity-option">查看详情</a></div>
+                        <div><a href="'.$act_id.'.php" class="activity-option">查看详情</a></div>
                         </div>
                     </div>';
                     }

@@ -45,11 +45,18 @@
     margin-top: 10px;
     font-size: 15px;
     color: #333333;
+    width: 375px;
 }
 
 .collection-items .collection-item .activity-info a {
     color: #333333;
     text-decoration-line: none;
+}
+
+.collection-items .collection-item .activity-info .info-item {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .collection-items .collection-item .activity-options {
