@@ -12,24 +12,33 @@
 
 
 <body>
-<nav class="global-nav">
-    <a href="index.html" id="global-nav-logo">
-        <img src="img/logo.png" height="100%">
-    </a>
-    <div class="nav-item left-nav-item active">
-        <a href="index.html">首页</a>
-    </div>
-    <div class="nav-item left-nav-item">
-        <a href="">分类</a>
-    </div>
-    <div class="nav-item right-nav-item">
-        <a href="">个人中心</a>
-    </div>
-    <div class="nav-item right-nav-item">
-        <b>董小葵</b>
-        <span class="logout-button"><a href="">[退出]</a></span>
-    </div>
-</nav>
+    <nav class="global-nav">
+        <a href="index.php" id="global-nav-logo">
+            <img src="img/logo.png" height="100%">
+        </a>
+        <div class="nav-item left-nav-item">
+            <a href="index.php">首页</a>
+        </div>
+        <div class="nav-item left-nav-item active">
+            <a href="activity_list.php">分类</a>
+        </div>
+        <div class="search-bar">
+            <form action="activity_list.php" method="get">
+                <input type="text" name="query">
+                <button type="submit">搜&nbsp;索</button>
+            </form>
+        </div>
+            <div class="nav-item right-nav-item">
+                <a href="user_center_userinfo.php">个人中心</a>
+            </div>
+            <div class="nav-item right-nav-item">
+                <b>董小葵</b>
+                <span class="logout-button"><a href="do_logout.php">[退出]</a></span>
+            </div>
+            <div class="nav-item right-nav-item" id="reminder">
+                <a>提醒</a><div class="reminder-list"><ul><li>>&nbsp;&nbsp;您报名的“北大剧星风采大赛初赛”将于今天举行</li><li>>“数学文化节”的时间更改为2020年4月2日</li></ul></div>
+            </div>
+    </nav>
 
 
 <div class="fix"></div>
@@ -38,7 +47,7 @@
     <br><br>
     <div class="host">
 
-        <div class="HostPic"><img src="pic/30.png" alt="北京大学剧星风采大赛初赛" id="activity_pic"></div>
+        <div class="HostPic"><img src="img/host_pkusu.png" alt="北京大学学生会" id="activity_pic"></div>
         <div class="HostText">
             <div>主办方名称：北京大学学生会</div>
             <div>英文名：Peking University Students' Union</div>
@@ -55,10 +64,10 @@
         <div class="activity_left">
             <div class="collection-items">
                 <div class="collection-item">
-                    <a href="">
+                    <a href="30.php">
                         <img src="pic/30.png" alt="北京大学剧星风采大赛初赛">
                     </a>
-                    <div class="activity-info"><a href="">
+                    <div class="activity-info"><a href="30.php">
                         <div>活动名：北京大学剧星风采大赛初赛</div>
                         <div>活动时间：2019年11月16日-11月24日</div>
                         <div>活动状态：已结束</div>
@@ -77,10 +86,10 @@
                 </div>
 
                 <div class="collection-item">
-                    <a href="">
+                    <a href="26.php">
                         <img src="pic/26.png" alt="北京大学十佳主持人大赛" style="float: left;">
                     </a>
-                    <div class="activity-info"><a href="">
+                    <div class="activity-info"><a href="26.php">
                         <div>活动名：北京大学十佳主持人大赛</div>
                         <div>活动时间：2019年11月23日-11月24日</div>
                         <div>活动状态：未举行</div>
@@ -107,10 +116,10 @@
         <div class="activity_left">
             <div class="collection-items">
                 <div class="collection-item">
-                    <a href="">
+                    <a href="30.php">
                         <img src="pic/30.png" alt="北京大学剧星风采大赛初赛">
                     </a>
-                    <div class="activity-info"><a href="">
+                    <div class="activity-info"><a href="30.php">
                         <div>活动名：北京大学剧星风采大赛初赛</div>
                         <div>活动时间：2019年11月16日-11月24日</div>
                         <div>活动状态：已结束</div>
@@ -129,10 +138,10 @@
                 </div>
 
                 <div class="collection-item">
-                    <a href="">
+                    <a href="26.php">
                         <img src="pic/26.png" alt="北京大学十佳主持人大赛" style="float: left;">
                     </a>
-                    <div class="activity-info"><a href="">
+                    <div class="activity-info"><a href="26.php">
                         <div>活动名：北京大学十佳主持人大赛</div>
                         <div>活动时间：2019年11月23日-11月24日</div>
                         <div>活动状态：未举行</div>
