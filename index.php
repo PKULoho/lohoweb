@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="activity_host.css">
     <link rel="stylesheet" href="user_center_collection.css">
     <link rel="stylesheet" href="INDEXcss.css">
+    <link rel="stylesheet" href="layui/css/layui.css" media="all">
     <style>
         .global-nav .search-bar input{
             height: 30px;
@@ -16,6 +17,8 @@
     </style>
 </head>
 
+<script src="layui/layui.js"></script>
+<script src="assets/index-carousel.js"></script>
 
 <body>
 <nav class="global-nav">
@@ -63,8 +66,15 @@
 
 <div class="fix"></div>
 <br>
-<div class="mainpic" style="width: 1200px;height: 356px; margin: 0 auto; text-align: center;">
+<!--<div class="mainpic" style="width: 1200px;height: 356px; margin: 0 auto; text-align: center;">
     <a href="30.php"><img src="pic/main.jpg" style="width: 1100px; "></a>
+</div>-->
+<div class="layui-carousel" id="carousel-test1">
+  <div carousel-item>
+    <div><a href="30.php"><img src="pic/carousel/1.jpg" style="width: 1100px; "></a></div>
+    <div><a href="30.php"><img src="pic/carousel/2.jpg" style="width: 1100px; "></a></div>
+    <div><a href="30.php"><img src="pic/carousel/3.jpg" style="width: 1100px; "></a></div>
+  </div>
 </div>
 <br>
 <div class="categories">
@@ -141,10 +151,11 @@ $ppp = $mysqli->query($sql_query, MYSQLI_STORE_RESULT);
 
 $alreadybought=$ppp->fetch_row();
 
+if(isset($_COOKIE['username'])){
 
 echo'<div class="category-container">
 <br>
-<div class="category" id="zhineng">智能推荐</div>
+<div class="category" id="zhineng">个性推荐</div>
 <div class="items">';
 
     $sql_query = "SELECT act_id,act_name,act_first_day,act_place FROM act_info WHERE act_id>25";
@@ -189,6 +200,7 @@ echo'<div class="category-container">
 
     
     echo '</div></div>';
+}
 
 
 

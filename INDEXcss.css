@@ -58,7 +58,7 @@ body {
     font-weight: bold;
 }
 
-.item-heading:hover{
+.item-heading:hover {
     color: #f67280;
 }
 
@@ -220,4 +220,8 @@ body {
 .categories .category-item:hover .icon-qita {
     background-image: url("ico/index_types/8_1.png");
     cursor: pointer;
+}
+
+.layui-carousel {
+    margin: 0 auto;
 }
