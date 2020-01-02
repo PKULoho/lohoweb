@@ -1,5 +1,8 @@
 <?php
 
+echo "<script>alert('注册成功，请登录！');";
+echo "window.location.replace(\"login.php\");</script>";
+
 // 连接数据库
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
